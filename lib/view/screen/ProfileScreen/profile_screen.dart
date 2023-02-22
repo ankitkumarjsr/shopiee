@@ -23,16 +23,7 @@ class ProfileScreen extends StatelessWidget {
                     colors: <Color>[Colors.blue, Colors.white]),
               ),
             ),
-            // leading: InkWell(
-            //     onTap: () => Navigator.pushReplacement(
-            //         context,
-            //         MaterialPageRoute(
-            //           builder: (context) => Homescreen(),
-            //         )),
-            //     child: Icon(
-            //       Icons.arrow_back,
-            //       color: Colors.white,
-            //     )),
+
             title: Row(
               children: [
                 Text(
@@ -76,7 +67,7 @@ class ProfileScreen extends StatelessWidget {
                       CircleAvatar(
                          maxRadius: 25,
                         backgroundImage: AssetImage(imgbg2),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -232,6 +223,23 @@ class ProfileScreen extends StatelessWidget {
                   trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
                 ),
                 ListTile(
+                  onTap: () {
+                    showDialog(context: context, builder: (context) {
+                       return AlertDialog(
+                         title: Text("Choose Language",style: TextStyle(fontWeight: FontWeight.bold),),
+                         content: ListTile(
+                           leading: Icon(Icons.check_box,color: Colors.blueAccent,),
+                           title: Text("English",style: TextStyle(fontWeight: FontWeight.bold),),
+                           trailing: Image(image: AssetImage(imgbg30),fit: BoxFit.cover),
+                         ), 
+                         actions: [
+                           Text("*Default",style: TextStyle(color: Colors.grey,fontSize: 14),)
+                         ],
+                       );
+                    },);
+                  },
+
+
                   leading: Icon(Icons.language_outlined,color: Colors.blueAccent,),
                   title: Text(
                     'Select Language',style: TextStyle(fontWeight: FontWeight.w600),

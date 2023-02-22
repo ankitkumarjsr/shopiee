@@ -17,7 +17,7 @@ class AppScreen extends ConsumerWidget {
     final displayState = ref.watch(appStateProvider);
     return Scaffold(
       bottomNavigationBar: BottomNaviBar(),
-      body: listOfScreens[displayState.screenState.currentScreen!],
+      body: listOfScreens[displayState.screenState.currentScreen],
     );
   }
 }

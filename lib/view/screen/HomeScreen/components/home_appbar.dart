@@ -9,24 +9,24 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return PreferredSize(
       preferredSize: preferredSize,
-      child: Container(
-        color: Colors.black,
-        child: Column(
-          children: [
-            AppBar(
-              backgroundColor: Colors.black,
-              title: Row(
-                children: <Widget>[
-                Text(
-                  "Shopiee",
-                   style: TextStyle(
-                      color: Colors.lightBlueAccent, fontWeight: FontWeight.bold,fontSize: 22),
-                 ),
-                  Text(".in",style: TextStyle(color: Colors.white,fontSize: 18),)
-                ],
-              ),
+      child: Column(
+        children: [
+          AppBar(
+             backgroundColor: Colors.grey.shade900,
+            title: Row(
+              children: <Widget>[
+              Text(
+                "Shopiee",
+                 style: TextStyle(
+                    color: Colors.lightBlueAccent, fontWeight: FontWeight.bold,fontSize: 22),
+               ),
+                Text(".in",style: TextStyle(color: Colors.white,fontSize: 18),)
+              ],
             ),
-            Padding(
+          ),
+          Container(
+            color: Colors.grey.shade900,
+            child: Padding(
               padding: const EdgeInsets.only(left: 12.0, right: 12.0),
               child: TextFormField(
                 cursorColor: Colors.white,
@@ -48,7 +48,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                   // suffixIcon: Icon(Icons.search_outlined,color: Colors.white),
                   suffixIcon: Container(
                     decoration: BoxDecoration(
-                        color: Colors.orangeAccent,
+                        color: Colors.orange.shade500,
                         borderRadius: BorderRadius.circular(15.0)),
                     child: const Icon(Icons.search_outlined, color: Colors.white),
                   ),
@@ -63,8 +63,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

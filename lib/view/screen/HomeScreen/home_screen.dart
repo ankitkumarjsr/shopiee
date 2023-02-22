@@ -5,13 +5,22 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:shopiee/constants/color_constant.dart';
 import 'package:shopiee/constants/images_constants.dart';
+import 'package:shopiee/models/GridView/FirstGrid/GridView_Container_Poster1.dart';
+import 'package:shopiee/models/GridView/SecondGrid/GridView_Container_poster2.dart';
+import 'package:shopiee/models/GridView/ThirdGrid/GridView_Container_Poster3.dart';
 import 'package:shopiee/models/address_model.dart';
-import 'package:shopiee/models/container_poster_model.dart';
 import 'package:shopiee/models/popular_item_model.dart';
 import 'package:shopiee/models/user_model.dart';
+import 'package:shopiee/view/common/product_page.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Suit.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/bottom_navi_bar.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/firstgrid_container.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/home_appbar.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/pop_item_list.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/Second/secondgrid_container.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/sliding_poster.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../models/poster_item_model.dart';
@@ -41,74 +50,8 @@ class Homescreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                height: 35,
-                width: double.infinity,
-                color: appbarColor,
-                child: Row(
-                  children: <Widget>[
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    const Icon(
-                      Icons.location_on_outlined,
-                      color: Colors.white,
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        print("Tapped");
-                      },
-                      child: const Text(
-                        "Select A Location To See Product Availability",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               const PopItemList(),
-              SizedBox(
-                // decoration:  BoxDecoration(border: Border.all(color: Colors.black,width: 5.0)),
-                height: 320,
-                width: double.infinity,
-                child: Stack(
-                  alignment: Alignment.bottomCenter,
-                  children: [
-                    // 1st widget
-                    PageView.builder(
-                      controller: controller,
-                      itemCount: posterItemList.length,
-                      itemBuilder: (context, index) {
-                        return Image.asset(
-                          posterItemList[index].images,
-                            height: 200,
-                           width: double.infinity,
-                          fit: BoxFit.fill,
-                        );
-                      },
-                    ),
-                    // 2nd widget
-                   SmoothPageIndicator(
-                        controller: controller,
-                        count: posterItemList.length,
-                        effect: SwapEffect(
-                          dotHeight: 16,
-                          dotWidth: 16,
-                          type: SwapType.yRotation,
-                        ),
-                        // effect: const WormEffect(
-                        //   activeDotColor: Colors.black,
-                        //   dotHeight: 12,
-                        //   dotWidth: 12,
-                        //   type: WormType.thin,
-                        //   // strokeWidth: 5,
-                        // ),
-
-                    ),
-                  ],
-                ),
-              ),
-
+               SlidingPoster(),
               const Divider(
                 color: Colors.grey,
                 height: 12,
@@ -177,73 +120,48 @@ class Homescreen extends StatelessWidget {
                 height: 12,
                 thickness: 3,
               ),
-              Container(
-                color: Colors.cyanAccent,
-                 height: MediaQuery.of(context).size.height*0.26,
-              width: double.infinity,
-              child: Image.asset(imgbg24,fit: BoxFit.fill,),
+              InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProductPage(),)),
+                child: Container(
+                   height: MediaQuery.of(context).size.height*0.12,
+                width: double.infinity,
+                child: Image.asset(imgbg24,fit: BoxFit.contain,),
             ),
+              ),
               const Divider(
                 color: Colors.grey,
                 height: 12,
                 thickness: 3,
               ),
 
-            const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6.0),
-                child: Text(
-                  "Starting ₹199  |  Deals on boy's fashions",
-                  style: TextStyle(fontSize: 20),
+
+                Container(
+
+                  decoration: BoxDecoration(border: Border.all(color: Colors.cyan.shade200,width: 10),borderRadius: BorderRadius.circular(10),color: Colors.white38),
+                  child: Text(
+                    "Starting ₹199  |  Deals on boy's fashions",
+                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),
+                  ),
                 ),
-              ),
+
 
               const SizedBox(height: 5,),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.55,
-                 // color: Colors.yellow.shade200,
-                width: double.infinity,
 
-                child: GridView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: containerPosterItems.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.9,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(height: 6,),
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              containerPosterItems[index].images,
-                              height: MediaQuery.of(context).size.height * 0.2,
-                              width: MediaQuery.of(context).size.width * 0.45,
-                              fit: BoxFit.fill,
-                            )),
-                        const SizedBox(
-                          height: 6,
-                        ),
-                        Text(containerPosterItems[index].name,textAlign: TextAlign.center,),
-                      ],
+              FirstGrid(),
 
-                    );
-                  },
-                ),
-              ),
               const Divider(
                 color: Colors.grey,
                 height: 12,
                 thickness: 3,
               ),
-              Container(
-                color: Colors.cyanAccent,
-                height: MediaQuery.of(context).size.height*0.26,
-                width: double.infinity,
-                child: Image.asset(imgbg21,fit: BoxFit.fill,),
+              InkWell(
+                onTap: () => Navigator.push(context,MaterialPageRoute(builder:(context) => MensSuits(),)),
+                child: Container(
+                  color: Colors.cyanAccent,
+                  height: MediaQuery.of(context).size.height*0.26,
+                  width: double.infinity,
+                  child: Image.asset(imgbg21,fit: BoxFit.fill,),
+                ),
               ),
               const Divider(
                 color: Colors.grey,
@@ -280,46 +198,81 @@ class Homescreen extends StatelessWidget {
               SizedBox(
                 height:5,
               ),
-
-              Container(
-                height: MediaQuery.of(context).size.height * 0.61,
-                  color: Colors.blue.shade100,
-                width: double.infinity,
-                child: GridView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: containerposteritems1.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.82,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              containerposteritems1[index].images,
-                              height: MediaQuery.of(context).size.height * 0.240,
-                              width: MediaQuery.of(context).size.width * 0.45,
-                              fit: BoxFit.fill,
-                            )),
-                        const SizedBox(
-                          height: 6,
-                        ),
-                        Text(containerposteritems1[index].name,textAlign: TextAlign.center,),
-                      ],
-
-                    );
-                  },
-                ),
-              ),
+             SecondGrid(),
               const Divider(
                 color: Colors.grey,
                 height: 12,
                 thickness: 3,
               ),
+
+              //below third grid
+              Text("Popular Brands In Men's Wear",style: TextStyle(decoration: TextDecoration.underline,fontSize: 25,fontWeight: FontWeight.bold,color: Color.fromRGBO(
+                  6, 9, 47, 0.8)),),
+              SizedBox(height: 5,),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.55,
+                width: double.infinity,
+                color: Colors.amber.shade100,
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: containerPosterItems.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.9,
+                  ),
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context) => MensWear(),)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Stack(children: [
+                            ClipRRect(
+                              child: Image.asset(
+                                containerposteritems2[index].images,
+                                height: MediaQuery.of(context).size.height * 0.2,
+                                width: MediaQuery.of(context).size.width * 0.45,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Positioned(child: Image(
+                              image: AssetImage(containerposteritems2[index].imagein),),
+                               height: MediaQuery.of(context).size.height * 0.089,
+                              width: MediaQuery.of(context).size.width*0.18,
+                               top: 44,
+                               left: 53,
+                            ),
+
+                          ],),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Text(containerposteritems2[index].name,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w500),),
+                          // Text()
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 320,top: 15),
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.alias,
+                  child: InkWell(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MensWear(),)),
+                    child: Text("See All",style: TextStyle(decoration: TextDecoration.underline),),
+                  ),
+                  // onHover: SystemMouseCursors.click,
+                ),
+                ),
+              const Divider(
+                color: Colors.grey,
+                height: 12,
+                thickness: 3,
+              ),
+              SizedBox(height: 50,),
 
               TextButton(
                   onPressed: () async {
