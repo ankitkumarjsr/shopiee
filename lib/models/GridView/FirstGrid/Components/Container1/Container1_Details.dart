@@ -20,7 +20,7 @@ class ContainerPosterDetails1{
 
 }
 List<ContainerPosterDetails1>containerposteritemsdetails1=[
-  ContainerPosterDetails1(images:imgbg32, Text:"ADRO", Description:"Men's Full Sleeve Hoodies",Price:"\u{20B9}580",Pricedis:"\u{20B9}500",Peroff:"(14% off)"),
+  ContainerPosterDetails1(images:imgbg32, Text:"ADRO", Description:"Men's Full Sleeve Hoodies",Price:"\u{20B9}2000",Pricedis:"\u{20B9}999",Peroff:"(51% off)"),
   ContainerPosterDetails1(images:imgbg33, Text:"Designer Unicorn",Description:"Winter Hoodied Sweatshirt",Price:"\u{20B9}999",Pricedis:"\u{20B9}749",Peroff:"(25% off)"),
   ContainerPosterDetails1(images:imgbg36, Text:"Adidas",Description:"Men's Flat Jacket", Price:"\u{20B9}4500",Pricedis:"\u{20B9}4000",Peroff:"(11% off)"),
   ContainerPosterDetails1(images:imgbg34, Text:"Hozie",Description:"Men's Jean Denim Jacket", Price:"\u{20B9}999",Pricedis:"\u{20B9}899",Peroff:"(10% off)"),
