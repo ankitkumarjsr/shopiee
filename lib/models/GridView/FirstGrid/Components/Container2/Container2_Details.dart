@@ -40,3 +40,4 @@ List<MensFootWearGrid1>mensfootweargrid1details=[
   MensFootWearGrid1(images:imgbg61, savings:"Upto 77% off",text: "Deal Of The \nDay", description: "Fancy Loafers"),
 ];
 
+

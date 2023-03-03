@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shopiee/constants/images_constants.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container1_Details.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container2_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/Container1_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container2/Container2_Details.dart';
+import 'package:shopiee/view/common/MensWearProductPg/mens_wear_1.dart';
 import 'package:shopiee/view/common/product_page.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
+
+import '../../../../../../../constants/screen_list.dart';
 
 class MensWear extends StatelessWidget {
   const MensWear({Key? key}) : super(key: key);
@@ -19,7 +22,8 @@ class MensWear extends StatelessWidget {
           child: AppBar(
             leading: InkWell(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),));
+
                 },
                 child: Icon(Icons.arrow_back, color: Colors.black)),
             elevation: 0,
@@ -63,7 +67,7 @@ class MensWear extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.35,
+                height: MediaQuery.of(context).size.height * 0.36,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -107,11 +111,13 @@ class MensWear extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.height * 0.29,
+                      height: MediaQuery.of(context).size.height * 0.295,
                       // color: Colors.blue,
                       child: ListView.builder(
                         itemBuilder: (context, index) {
                           return GestureDetector(
+                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FirstGridMensWearProductScreen1[index],)),
+
                             child: Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
@@ -177,7 +183,7 @@ class MensWear extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) {
                     return GestureDetector(
-                      onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProductPage(),)),
+                      onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => FirstGridMensWearProductScreen[index],)),
                         child: Stack(
                       children: [
                         Column(

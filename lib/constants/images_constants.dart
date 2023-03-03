@@ -2,14 +2,29 @@
 const imgbg1i='assets/3.jpg';
 const imgbg5='assets/4.jpeg';
 const imgbg1='assets/5.jpg';
+
+
+//below is shopiee logo
+const imgbg22i='assets/img22i.png';
+const imgbg22ii='assets/OrderPlaced.gif';
+const imgbg22iii='assets/OrderPlaced1.gif';
 const imgbgin='assets/IndianFlag.gif';
 
-//below is engginnering pics
+//below is engginner hoodie pics
 const imgbg116='assets/engg1.jpeg';
 const imgbg117='assets/engg2.jpeg';
 const imgbg118='assets/engg3.jpeg';
 const imgbg119='assets/engg4.jpeg';
 const imgbg120='assets/engg5.jpeg';
+
+ //below is adidas jacket pics
+ // const imgbg36='assets/img36.jpg';
+ const imgbg121='assets/img116.jpg';
+ const imgbg122='assets/img117.jpg';
+ const imgbg123='assets/img118.jpg';
+ const imgbg124='assets/img119.jpg';
+ const imgbg125='assets/img120.jpg';
+
 
 
 
@@ -42,6 +57,7 @@ const imgbg28='assets/img28.jpeg';
 const imgbg29='assets/img29.jpg';
 const imgbg30='assets/img30.jpg';
 const imgbg31='assets/img31.gif';
+
 //below is Men's Wear Pics
 const imgbg32='assets/img32.jpg';
 const imgbg33='assets/img33.jpg';
@@ -55,6 +71,7 @@ const imgbg40='assets/img40.jpg';
 const imgbg41='assets/img41.jpg';
 const imgbg42='assets/img42.jpg';
 const imgbg43='assets/img43.jpg';
+
 //below is Men's Wear List1 pics
 const imgbg46='assets/img46.jpg';
 const imgbg47='assets/img47.jpg';
@@ -77,6 +94,17 @@ const imgbg60='assets/img60.jpg';
 const imgbg61='assets/img61.jpeg';
 const imgbg62='assets/img62.jpeg';
 const imgbg63='assets/img63.jpg';
+
+//below is mens FootWear Product Pics
+const imgbg126='assets/img126.jpg';
+const imgbg127='assets/img127.jpg';
+const imgbg128='assets/imgbg128.png';
+const imgbg129='assets/img129.jpeg';
+const imgbg130='assets/img130.jpg';
+const imgbg131='assets/img131.jpg';
+const imgbg132='assets/img132.jpg';
+const imgbg133='assets/img133.jpg';
+
 
 //below is sponsored pics
 const imgbg64='assets/spon1.jpeg';

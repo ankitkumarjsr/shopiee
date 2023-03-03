@@ -7,7 +7,7 @@ import 'package:shopiee/models/GridView/SecondGrid/GridView_Container_poster2.da
    @override
    Widget build(BuildContext context) {
      return  Container(
-       height: MediaQuery.of(context).size.height * 0.61,
+       height: MediaQuery.of(context).size.height * 0.65,
        color: Colors.pink.shade100,
        width: double.infinity,
        child: GridView.builder(

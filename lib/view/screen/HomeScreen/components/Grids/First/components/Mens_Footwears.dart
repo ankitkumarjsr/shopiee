@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shopiee/constants/images_constants.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container1_Details.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container2_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/Container1_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container2/Container2_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/footwear_box.dart';
+import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class MensFootwear extends StatelessWidget {
@@ -15,7 +16,7 @@ class MensFootwear extends StatelessWidget {
       appBar: AppBar(
         leading: InkWell(
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),));
             },
             child: Icon(Icons.arrow_back, color: Colors.white)),
         title: Text("Men's Footwear"),
@@ -66,7 +67,7 @@ class MensFootwear extends StatelessWidget {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.14,
+              height: MediaQuery.of(context).size.height * 0.15,
               width: double.infinity,
               child: ListView.builder(
                 itemBuilder: (context, index) {
@@ -143,6 +144,26 @@ class MensFootwear extends StatelessWidget {
               ),
             ),
             Divider(color: Colors.grey,thickness: 3),
+            Container(
+              color: Colors.black12,
+              // height: MediaQuery.of(context).size.height*0.45,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 300,bottom: 5,top: 3),
+                    child: Text("  Sponsored*",style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold),),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height*0.4,
+                    child: Image.asset(imgbg133,
+                      fit: BoxFit.contain,
+                      // height: MediaQuery.of(context).size.height*0.48,
+                      // width: double.infinity,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

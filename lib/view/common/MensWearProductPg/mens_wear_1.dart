@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/engghoodie_samplepic.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
+import 'package:shopiee/view/common/MensWearProductPg/payment_1.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({Key? key}) : super(key: key);
+import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
+
+class MensWearProduct1 extends StatelessWidget {
+  const MensWearProduct1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class ProductPage extends StatelessWidget {
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Homescreen(),
+                  builder: (context) => MensWear(),
                 )),
             icon: Icon(Icons.arrow_back)),
         title: Text("Product Page"),
@@ -228,7 +231,7 @@ class ProductPage extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CartScreen(),
+                    builder: (context) => Payment1(),
                   )),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
@@ -1258,7 +1261,7 @@ class ProductPage extends StatelessWidget {
               height: 12,
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.55,
               width: 330,
               decoration: BoxDecoration(
                   image: DecorationImage(

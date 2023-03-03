@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shopiee/constants/screen_list.dart';
 
-import '../../../../../../../models/GridView/FirstGrid/Components/Container2_Details.dart';
+import '../../../../../../../models/GridView/FirstGrid/Components/Container2/Container2_Details.dart';
 
 class FootWearBox extends StatelessWidget {
   final int index;
@@ -9,6 +10,7 @@ class FootWearBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap:  () => Navigator.push(context, MaterialPageRoute(builder: (context) => FirstGridMensFootwearProductScreen1[index],)),
         child: Stack(
           children: [
             Column(

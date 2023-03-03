@@ -11,7 +11,7 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white12,
+       backgroundColor: Colors.white12,
       body: Column(
 
         children: <Widget>[
@@ -19,18 +19,18 @@ class AuthScreen extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.89,
+                height: MediaQuery.of(context).size.height * 0.85,
                 child: Image.asset(imgbg22),
               ),
               Positioned(
-                top:530,
+                top:478,
                 child: Column(
                   children: [
-                  Text("𝐋𝐢𝐟𝐞 𝐈𝐬 𝐀 𝐒𝐡𝐨𝐩𝐚𝐡𝐨𝐥𝐢𝐜!",style: TextStyle(color: Colors.white, fontSize: 22),),
+                  Text("𝐋𝐢𝐟𝐞 𝐈𝐬 𝐀 𝐒𝐡𝐨𝐩𝐚𝐡𝐨𝐥𝐢𝐜!",style: TextStyle(color: Colors.white, fontSize: 23),),
                      SizedBox(height: 3),
-                     Text("So Shop Now With Shoppiee",style: TextStyle(color: Colors.white,fontSize: 16),),
+                     Text("So Shop Now With Shoppiee",style: TextStyle(color: Colors.white,fontSize: 17),),
                     SizedBox(
-                      height: 35,
+                      height: 30,
                     ),
                     InkWell(
                       onTap: () =>Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(),)),
@@ -46,7 +46,7 @@ class AuthScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 18,
+                      height: 5,
                     ),
                     InkWell(
                       onTap: () => Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => AppScreen() ,)),

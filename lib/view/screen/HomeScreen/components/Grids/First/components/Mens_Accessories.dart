@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shopiee/constants/images_constants.dart';
 import 'package:shopiee/constants/screen_list.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container3_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container3/Container3_Details.dart';
 import 'package:shopiee/models/GridView/FirstGrid/GridView_Container_Poster1.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -58,7 +58,7 @@ class MensAccessories extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap:() {
-                // Navigator.push(context,MaterialPageRoute(builder: (context) => firstGridScreens[index],));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) => FirstGridMensAccessoriesFirstProductScreen[index],));
               },
               child: Container(
                  decoration: BoxDecoration(border:Border.all(color: Colors.black45,width: 1)),
@@ -119,7 +119,7 @@ class MensAccessories extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap:() {
-                      // Navigator.push(context,MaterialPageRoute(builder: (context) => firstGridScreens[index],));
+                       Navigator.push(context,MaterialPageRoute(builder: (context) => FirstGridMensAccessoriesSecondProductScreen[index],));
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

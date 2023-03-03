@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shopiee/config/device_size.dart';
+import 'package:shopiee/view/screen/AuthScreen/auth_screen.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({Key? key}) : super(key: key);
@@ -12,6 +13,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Column(
         children: [
           AppBar(
+             leading: InkWell(
+               onTap:  () => Navigator.push(context, MaterialPageRoute(builder: (context) => AuthScreen(),)),
+                 child: Icon(Icons.arrow_back,)),
              backgroundColor: Colors.grey.shade900,
             title: Row(
               children: <Widget>[

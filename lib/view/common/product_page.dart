@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/engghoodie_samplepic.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';

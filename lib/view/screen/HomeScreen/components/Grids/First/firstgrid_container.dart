@@ -7,9 +7,9 @@ class FirstGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.55,
+      height: MediaQuery.of(context).size.height * 0.58,
       width: double.infinity,
-      color: Colors.orangeAccent.shade100,
+      color: Colors.limeAccent,
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),

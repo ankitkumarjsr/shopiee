@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container1_Details.dart';
+import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/Container1_Details.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container4_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 class MensSuits extends StatelessWidget {
