@@ -5,6 +5,7 @@ import 'package:shopiee/constants/screen_list.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container3/Container3_Details.dart';
 import 'package:shopiee/models/GridView/FirstGrid/GridView_Container_Poster1.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
+import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 class MensAccessories extends StatelessWidget {
    MensAccessories({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class MensAccessories extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
         leading: InkWell(
-          onTap: () => Navigator.pop(context),
+          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),)),
             child: Icon(Icons.arrow_back)),
         title: Text("Men's Accessories"),
         actions: [
@@ -177,7 +178,7 @@ class MensAccessories extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap:() {
-                      // Navigator.push(context,MaterialPageRoute(builder: (context) => firstGridScreens[index],));
+                       Navigator.push(context,MaterialPageRoute(builder: (context) => FirstGridMensAccessoriesThirdProductScreen[index],));
                     },
                     child: Column(
                       children: [

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:shopiee/constants/images_constants.dart';
 class MensAccessoriesFirstGrid{
   final String images;
@@ -16,6 +17,8 @@ List<MensAccessoriesFirstGrid>mensaccessgriddetails=[
   MensAccessoriesFirstGrid(images: imgbg71, pricedis: "\u{20B9}259", price:"\u{20B9}599"),
   MensAccessoriesFirstGrid(images: imgbg73, pricedis: "\u{20B9}599", price: "\u{20B9}1000"),
 ];
+
+
 
 class MensAccessoriesSecondGrid{
    final String images;
@@ -63,4 +66,23 @@ List<MensAccessoriesThirdGrid>mensaccessgrid3details=[
   MensAccessoriesThirdGrid(images: imgbg86,percen: "(23% OFF)",priced: "1999", descrip: "Brand:Fastrack",free: "Free Delievery By Shopiee",deal: "Deal Of The Day", price:"\u{20B9}1549",constext: "Fastrack Men Square \nSunglasses Black Frame \nBlue Lens"),
 ];
 
+class MensAccessoriesFirstGridFirstListView {
+  final String icon;
+  final String heading;
+  final String description;
+  final String more;
 
+  MensAccessoriesFirstGridFirstListView({
+    required this.icon, required this.heading, required this.description, required this.more
+
+
+  });
+}
+  List<MensAccessoriesFirstGridFirstListView>firstlistdetails=[
+    MensAccessoriesFirstGridFirstListView(icon: "👑",description: "Get \u{20B9}20 cashback if you buy with other items in cart.",heading: "Cashback",more: "See More"),
+     MensAccessoriesFirstGridFirstListView(icon: "👜", heading: "Buy More, Save...", description: "Get \u{20B9}20.00 back for every eligible item purchased with this i... ", more: "View Product"),
+    MensAccessoriesFirstGridFirstListView(icon: "📋", heading: "No Cost EMI", description: "Avail No Cost EMI on select cards for orders above \u{20B9}3000.", more: "See More"),
+    MensAccessoriesFirstGridFirstListView(icon: "🏦", heading: "Bank Offer", description: "5% Instant Discount up to INR 250 on HBSC Cashback Card Credit...", more: " 📋 1 Offer"),
+    MensAccessoriesFirstGridFirstListView(icon: "🤝", heading: "Partner Offer", description: "Get GST invoice and save up to 25% on business purchase....", more: "See More"),
+    MensAccessoriesFirstGridFirstListView(icon: "-", heading: "-", description:"-", more: "View All Offers."),
+  ];

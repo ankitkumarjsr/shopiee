@@ -40,7 +40,12 @@ class Assets {
   static const String assetsImg120 = 'assets/img120.jpg';
   static const String assetsImg126 = 'assets/img126.jpg';
   static const String assetsImg127 = 'assets/img127.jpg';
+  static const String assetsImg129 = 'assets/img129.jpeg';
   static const String assetsImg13 = 'assets/img13.jpg';
+  static const String assetsImg130 = 'assets/img130.jpg';
+  static const String assetsImg131 = 'assets/img131.jpg';
+  static const String assetsImg132 = 'assets/img132.jpg';
+  static const String assetsImg133 = 'assets/img133.jpg';
   static const String assetsImg14 = 'assets/img14.jpg';
   static const String assetsImg15 = 'assets/img15.jpg';
   static const String assetsImg16 = 'assets/img16.jpg';
@@ -125,6 +130,7 @@ class Assets {
   static const String assetsImg97 = 'assets/img97.jpg';
   static const String assetsImg98 = 'assets/img98.jpg';
   static const String assetsImg99 = 'assets/img99.jpg';
+  static const String assetsImgbg128 = 'assets/imgbg128.png';
   static const String assetsIndianFlag = 'assets/IndianFlag.gif';
   static const String assetsOrderPlaced = 'assets/OrderPlaced.gif';
   static const String assetsOrderPlaced1 = 'assets/OrderPlaced1.gif';

@@ -123,6 +123,13 @@ const imgbg69i='assets/img69.jpeg';
 const imgbg70='assets/img70.jpeg';
 const imgbg71='assets/img71.jpg';
 
+//below is mens accesries first product pics
+ const imgbg134='assets/img134.jpg';
+const imgbg135='assets/img135.jpg';
+const imgbg136='assets/img136.jpg';
+const imgbg137='assets/img137.jpg';
+const imgbg138='assets/img138.jpg';
+
 //below is mens accessoirs grid2pics
 const imgbg68i='assets/img68.jpg';
 const imgbg81='assets/img81.jpeg';

@@ -3,17 +3,27 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a1.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a2.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a3.dart';
 import 'package:shopiee/view/common/MensWearProductPg/payment_2.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Accessories.dart';
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../models/GridView/FirstGrid/Components/Container2/Mens_FootWearPageBuilder.dart';
+import '../../../models/GridView/FirstGrid/Components/Container3/Container3_Details.dart';
+import '../../../models/GridView/FirstGrid/Components/Container3/mensaccessoriespagebuilder.dart';
+import '../../../models/poster_item_model.dart';
 import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
 
 class MensAccessoriesProduct3 extends StatelessWidget {
-  const MensAccessoriesProduct3({Key? key}) : super(key: key);
+  MensAccessoriesProduct3({Key? key}) : super(key: key);
 
+
+  final controller = PageController( keepPage: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,23 +41,61 @@ class MensAccessoriesProduct3 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 12,),
             Row(
               children:[
-                SizedBox(width: 355,),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Icon(Icons.share_rounded,color: Colors.black,),
-                ),],
-            ),
-            Positioned(
-              child: Center(
-                child: Image(
-                  image: AssetImage(imgbg71),
+                Text("   Visit The Boldfit Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
+
+                SizedBox(width: 85,),
+                RatingBar.builder(
+                  itemSize: 20,
+                  initialRating: 4.5,
+                  minRating: 4.5,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                  itemBuilder: (context, index) => Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  onRatingUpdate: (rating) {
+                    print(rating);
+                  },
                 ),
-              ),
-              height: MediaQuery.of(context).size.height * 0.081,
+                SizedBox(width: 5,),
+                Text("3,458"),
+              ],
 
             ),
+
+
+            Padding(
+              padding: const EdgeInsets.only(top: 8,left: 10),
+              child: Text("Boldfit Winter Wear for Women Winter Cap for Men Woolen "
+                  "Cap for Men Beanie Cap for Men Winter Gloves for Men Winter"
+                  " Clothing Set for Women & Men. Mufflers for Men Neck Warmer Winter Clothes for Women "),
+            ),
+
+            Row(
+              children:[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: CircleAvatar(backgroundColor: Colors.red.shade900,
+                      radius: 23,
+                      child: Text("  81% \n  off",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),)),
+                ),
+                SizedBox(width: 290,),
+                Padding(
+                  padding: const EdgeInsets.only(top: 0.1),
+                  child: Container(
+                      decoration: BoxDecoration(shape: BoxShape.circle,border: Border.all(color: Colors.black)),
+                      child: Icon(Icons.share_rounded,color: Colors.black,)),
+                ),],
+            ),
+
+            Image(image: AssetImage(imgbg71)),
+
             Divider(
               thickness: 3,
               color: Colors.grey,
@@ -57,33 +105,10 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Colour: ",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                Text("Black",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18)),
+                Text("Deal",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 20),),
               ],
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Size: ",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                Text("XL",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18)),
-              ],
-            ),
+
             SizedBox(
               height: 10,
             ),
@@ -92,7 +117,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "-55%",
+                    "-81%",
                     style: TextStyle(
                         fontSize: 28,
                         color: Colors.red,
@@ -102,7 +127,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                     width: 13,
                   ),
                   Text(
-                    "\u{20B9}399",
+                    "\u{20B9}299",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -128,7 +153,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "\u{20B9}885",
+                    "\u{20B9}1599",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey.shade800,
@@ -147,13 +172,80 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
+
             SizedBox(
-              height: 10,
+              height: 12,
             ),
             Divider(
               thickness: 3,
               color: Colors.grey,
             ),
+            Row(
+              children: [
+                SizedBox(width: 12,),
+                CircleAvatar(
+
+                  backgroundColor: Colors.lime,
+                  child: Icon(Icons.percent_outlined,color: Colors.black,),),
+                SizedBox(width: 8,),
+                Text("Save Extra",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              ],
+            ),
+            SizedBox(height: 10,),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.15,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () => Navigator,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Center(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.40,
+                          height: 155,
+                          decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
+
+                          child: Column(
+                            children: [
+                              SizedBox(height: 5,),
+                              Row(
+                                children:[
+                                  SizedBox(width: 4,),
+                                  Text(firstlistdetails[index].icon,style: TextStyle(fontWeight: FontWeight.w500)),
+                                  SizedBox(width: 2,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text(firstlistdetails[index].heading,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                  ),],
+                              ),
+
+                              SizedBox(height: 3,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Text(firstlistdetails[index].description,style: TextStyle(fontWeight: FontWeight.w500),),
+                              ),
+                              SizedBox(height: 12,),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 60),
+                                child: Text(firstlistdetails[index].more,style: TextStyle(color: Colors.blue.shade700,fontWeight: FontWeight.w500),),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                scrollDirection: Axis.horizontal,
+                itemCount: mensfootsize.length,
+              ),
+            ),
+            Divider(
+              thickness: 3,
+              color: Colors.grey,
+            ),
+            SizedBox(height: 5,),
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Row(
@@ -163,24 +255,130 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.blue.shade900),
-                  )
+                  ),
+                  Text(" Tuesday,  15 April",style: TextStyle(fontWeight: FontWeight.bold),),
+                  Text(" on first order.",style: TextStyle(fontWeight: FontWeight.w400),),
+
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 310),
+              child: Text(
+                "Details",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue.shade900),
+              ),
+            ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "or fastest delievery",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(" Tommorow,  12 April",style: TextStyle(fontWeight: FontWeight.bold),),
+
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "Order Within",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(" 5 hrs 21 mins.",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+                  Text(
+                    " Details",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue.shade900),
+                  ),
                 ],
               ),
             ),
             SizedBox(
               height: 10,
             ),
+            Row(
+              children:[
+                SizedBox(width: 9,),
+                Icon(Icons.location_on_outlined,color: Colors.black,),
+                Text("  Deliver To Ankit - Jamshedpur 832108",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue.shade900),),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 18),
+              padding: const EdgeInsets.only(left: 15),
               child: Row(
                 children: [
                   Text(
                     "In Stock",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.green.shade900),
+                        color: Colors.green),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            InkWell(
+              //   onTap: () {
+              //     showDialog(
+              //       context: context,
+              //       builder: (BuildContext dialogContext) {
+              //         return ListTile(title: Text("ftf"),);
+              //           // AlertDialog(
+              //   backgroundColor: Colors.grey.shade300,
+              //   content: Text('Product Added To Cart Successfully!!'),
+              //   actions: <Widget>[
+              //     TextButton(
+              //       child: Text('Ok'),
+              //       onPressed: () {
+              //         Navigator.of(dialogContext)
+              //             .pop(); // Dismiss alert dialog
+              //       },
+              //     ),
+              //   ],
+              // );
+              //       },
+              //     );
+              //   },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height*0.05,
+                      width: MediaQuery.of(context).size.width*0.19,
+                      color: Colors.grey.shade300,
+                      child: Center(
+                        child: Row(
+                          children: [
+                            Text("  Qty: 1",style: TextStyle(fontWeight: FontWeight.w500),),
+                            Icon(Icons.keyboard_arrow_down_outlined),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 40,),
+                    Text("\u{20B9}20 cashback for every extra unit \nyou buy (Up to \u{20B9}60)",style: TextStyle(fontWeight: FontWeight.w500),)
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -232,7 +430,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Payment2(),
+                    builder: (context) => Paymenta3(),
                   )),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
@@ -252,19 +450,276 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
+            SizedBox(height: 12,),
+            Row(
+              children: [
+                SizedBox(width: 10,),
+                Icon(Icons.lock,color: Colors.grey,),
+                SizedBox(width: 11,),
+                Text("Secure Transaction",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 235),
-              child: Text(
-                "Product Details",
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey.shade800,
-                    fontWeight: FontWeight.bold),
+            SizedBox(height: 8,),
+            Row(
+              children: [
+                SizedBox(width: 15,),
+                Text("Sold By ",style: TextStyle(fontWeight: FontWeight.w500),),
+                Text("RK WORLD Infocom Pvt ",style: TextStyle(color:Colors.blue ,fontWeight: FontWeight.w500),),
+                Text("and ",style: TextStyle(fontWeight: FontWeight.w500),),
+                Text("Fulfilled by Shopiee.",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
+              ],
+            ),
+            SizedBox(height: 12,),
+            Container(
+              padding: const EdgeInsets.only(left: 10),
+              // color: Colors.grey,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  color: Colors.grey.shade500),
+              height: 50,
+              width: double.infinity,
+              child: Row(
+                children: <Widget>[
+                  // CircleAvatar(backgroundImage:AssetImage(imgbg18)),
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(5),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg18),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" PAY ON \n DELIVERY", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    width: 18,
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(6),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg19),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" EASY \n RETURNS", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    width: 18,
+                  ),
+
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(6),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg20),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" FREE DELIVERY \n ON FIRST ORDER",
+                      style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold))
+                ],
               ),
+            ),
+
+            SizedBox(height: 5,),
+            Divider(thickness: 3,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(right: 310),
+              child: Text("Sponsored",style: TextStyle(color: Colors.grey),),
+            ),
+            Row(
+              children: [
+                Image(image: AssetImage(imgbg70),height: 150,width: 180,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Handcuffs Winter Knit Beanie\nCap Hat Neck Warmer Scarf \nand Touchscreen Gloves \nSet for M...",style: TextStyle(fontWeight: FontWeight.w500),),
+                    SizedBox(height: 5,),
+                    Text("\u{20B9}599.00",style: TextStyle(color: Colors.red),),
+                    SizedBox(height: 5,),
+                    Text("✓Prime",style: TextStyle(color: Colors.blue.shade800),)
+                  ],
+                ),
+              ],
+            ),
+            Divider(thickness: 3,color: Colors.grey,),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 100),
+              child: Text("Frequently Brought Together",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            SizedBox(height: 10,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.2,
+              width: MediaQuery.of(context).size.width*0.9,
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              child: Row(
+                children:[
+                  SizedBox(width: 25,),
+                  Image(image: AssetImage(imgbg71)),
+                  Text("+",style: TextStyle(fontSize: 30,color:Colors.grey),),
+                  Image(image: AssetImage(imgbg85)),
+                ],
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height*0.1,
+              width: MediaQuery.of(context).size.width*0.9,
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              child: Row(
+                children: [
+                  SizedBox(width: 110,),
+                  Text("Buy Both:\u{20B9}649.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                  SizedBox(width: 45,),
+                  IconButton(onPressed: () => () {
+
+                  }, icon: Icon(Icons.keyboard_arrow_down,color: Colors.black,))
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Divider(thickness: 3,color: Colors.grey,),
+
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 145),
+              child: Text("Product image gallery ",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg71)),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg134),fit:BoxFit.fill),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg135)),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg136)),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg137)),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg138)),
+            ),
+            Divider(thickness: 2,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(left: 18),
+              child: Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.025,
+                    width: 80,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: <Color>[
+                            Colors.blue,
+                            Colors.white,
+                          ]),
+                    ),
+                    child: Center(
+                        child: Text(
+                          "Top Brand-",
+                          style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),
+                        )),
+                  ),
+                  Text(
+                    "Boldfit",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  88% positive rating from 5K+ customers.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  1.5K+ recent orders from this brand.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  2.5+ years on shopiee.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            Divider(thickness: 3,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(right: 200),
+              child: Text("Features & details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             ),
             SizedBox(
               height: 10,
@@ -447,6 +902,9 @@ class MensAccessoriesProduct3 extends StatelessWidget {
               color: Colors.grey,
             ),
 
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 200),
               child: Text(
@@ -744,8 +1202,8 @@ class MensAccessoriesProduct3 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 210),
-              child: Text("Size:XL  |  Colour:Black"),
+              padding: const EdgeInsets.only(right: 270),
+              child: Text("  Colour:Black"),
             ),
             SizedBox(
               height: 5,
@@ -753,7 +1211,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Text(
-                  " Quality of this hoodie is awesome. i totally loved this product"),
+                  " Quality of this product is awesome. i totally loved this product"),
             ),
             SizedBox(
               height: 10,
@@ -905,7 +1363,7 @@ class MensAccessoriesProduct3 extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Nice Hoodie ",
+                  "Nice Cap ",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Icon(
@@ -939,9 +1397,9 @@ class MensAccessoriesProduct3 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(right: 50),
               child: Text(
-                  "I encourage seller to make more tech hoodies,more IT guys hoodies,more programmer hoodies."),
+                  "I encourage seller to make more  Winter Caps."),
             ),
             SizedBox(
               height: 10,

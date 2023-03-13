@@ -20,12 +20,16 @@ import 'package:shopiee/view/screen/HomeScreen/components/Grids/Second/componets
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:shopiee/view/screen/ProfileScreen/profile_screen.dart';
 
+import '../view/common/MensAccessoriesProductPg/mens_accessories10.dart';
+import '../view/common/MensAccessoriesProductPg/mens_accessories11.dart';
+import '../view/common/MensAccessoriesProductPg/mens_accessories12.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories3.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories4.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories5.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories6.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories7.dart';
 import '../view/common/MensAccessoriesProductPg/mens_accessories8.dart';
+import '../view/common/MensAccessoriesProductPg/mens_accessories9.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_2.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_3.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_4.dart';
@@ -121,6 +125,12 @@ final FirstGridMensAccessoriesSecondProductScreen=[
   MensAccessoriesProduct8(),
 ];
 
+final FirstGridMensAccessoriesThirdProductScreen=[
+  MensAccessoriesProduct9(),
+  MensAccessoriesProduct10(),
+  MensAccessoriesProduct11(),
+  MensAccessoriesProduct12(),
+];
 final secondGridScreens=[
   WomensClothes(),
   WomensAccessories(),

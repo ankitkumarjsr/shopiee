@@ -12,6 +12,7 @@ import 'package:shopiee/models/address_model.dart';
 import 'package:shopiee/models/popular_item_model.dart';
 import 'package:shopiee/models/user_model.dart';
 import 'package:shopiee/view/common/product_page.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Footwears.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Suit.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/bottom_navi_bar.dart';
@@ -121,7 +122,7 @@ class Homescreen extends StatelessWidget {
                 thickness: 3,
               ),
               InkWell(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProductPage(),)),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MensFootwear(),)),
                 child: Container(
                    height: MediaQuery.of(context).size.height*0.12,
                 width: double.infinity,
