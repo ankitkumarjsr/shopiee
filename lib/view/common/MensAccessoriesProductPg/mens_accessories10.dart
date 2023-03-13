@@ -21,6 +21,7 @@ import '../../../models/GridView/FirstGrid/Components/Container3/Container3_Deta
 import '../../../models/GridView/FirstGrid/Components/Container3/mensaccessoriespagebuilder.dart';
 import '../../../models/poster_item_model.dart';
 import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
+import 'Payment_a10.dart';
 import 'Payment_a9.dart';
 
 class MensAccessoriesProduct10 extends StatelessWidget {
@@ -48,7 +49,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
             SizedBox(height: 12,),
             Row(
               children:[
-                Text("   Visit The Rocox Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
+                Text("   Visit The Retreez Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
 
                 SizedBox(width:90,),
                 RatingBar.builder(
@@ -75,8 +76,8 @@ class MensAccessoriesProduct10 extends StatelessWidget {
 
 
             Padding(
-              padding: const EdgeInsets.only(top: 8,right: 45),
-              child: Text("Rocox Men's Brown Leather Belt Of PREMIUM Quality"),
+              padding: const EdgeInsets.only(top: 8,right: 10),
+              child: Text("Retreez Dots And Check Pattern Woven Men's Tie-Navy Blue"),
             ),
 
             Row(
@@ -84,8 +85,8 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: CircleAvatar(backgroundColor: Colors.red.shade900,
-                      radius: 21,
-                      child: Text("  8% \n  off",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
+                      radius: 22,
+                      child: Text("  30% \n  off",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
                 ),
                 SizedBox(width: 290,),
                 Padding(
@@ -119,7 +120,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "-8%",
+                    "-30%",
                     style: TextStyle(
                         fontSize: 28,
                         color: Colors.red,
@@ -129,7 +130,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                     width: 13,
                   ),
                   Text(
-                    "\u{20B9}1250",
+                    "\u{20B9}699",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -155,7 +156,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "\u{20B9}1399",
+                    "\u{20B9}999",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey.shade800,
@@ -188,7 +189,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                   "Colour: ",
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
-                Text("Brown",
+                Text("Navy Blue",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -228,13 +229,13 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                     SizedBox(height: 5,),
                     Row(
                       children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        Text("-30% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
                         SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                        Text("\u{20B9}699.00",style: TextStyle(fontWeight: FontWeight.w500),),
                       ],
                     ),
                     Text(
-                      "\u{20B9}1399.00",
+                      "\u{20B9}999.00",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.grey.shade500,
@@ -269,13 +270,13 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                     SizedBox(height: 10,),
                     Row(
                       children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        Text("-30% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
                         SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                        Text("\u{20B9}699.00",style: TextStyle(fontWeight: FontWeight.w500),),
                       ],
                     ),
                     Text(
-                      "\u{20B9}1399.00",
+                      "\u{20B9}999.00",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.grey.shade500,
@@ -310,13 +311,13 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                     SizedBox(height: 10,),
                     Row(
                       children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        Text("-30% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
                         SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                        Text("\u{20B9}699.00",style: TextStyle(fontWeight: FontWeight.w500),),
                       ],
                     ),
                     Text(
-                      "\u{20B9}1399.00",
+                      "\u{20B9}999.00",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.grey.shade500,
@@ -329,35 +330,6 @@ class MensAccessoriesProduct10 extends StatelessWidget {
               ],
             ),
 
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(width: 12,),
-                Text("Size:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
-                Text("26'' to 44'' Waist Adjustable",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-              ],
-            ),
-            SizedBox(height: 15,),
-            Row(
-              children:[
-                SizedBox(width: 12,),
-                Container(
-                  height: 40,
-                  width: 180,
-                  color: Colors.black,
-                  child: Center(child: Text("26'' to 44'' Waist Adjustable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),)),
-                ),
-                SizedBox(width: 12,),
-                Container(
-                  height: 40,
-                  width: 180,
-                  decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
-                  child: Center(child: Text("46'' to 54'' Waist Adjustable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.black),)),
-                )
-              ],
-            ),
             SizedBox(
               height: 15,
             ),
@@ -615,7 +587,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Paymenta9(),
+                    builder: (context) => Paymenta10(),
                   )),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
@@ -745,7 +717,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height*0.2,
               width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 0.8)),
               child: Row(
                 children:[
                   SizedBox(width: 30,),
@@ -758,11 +730,11 @@ class MensAccessoriesProduct10 extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height*0.1,
               width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 0.8)),
               child: Row(
                 children: [
                   SizedBox(width: 90,),
-                  Text("Buy Both:\u{20B9}1649.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                  Text("Buy Both:\u{20B9}999.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
                   SizedBox(width: 45,),
                   IconButton(onPressed: () => () {
 
@@ -807,7 +779,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                     child: Center(
                         child: Text(
                           "Top Brand-",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),
                         )),
                   ),
                   Text(
@@ -893,9 +865,9 @@ class MensAccessoriesProduct10 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 270),
+              padding: const EdgeInsets.only(right: 300),
               child: Text(
-                "Faux Leather",
+                "Cotton",
                 style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
               ),
             ),
@@ -1360,7 +1332,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 275),
+              padding: const EdgeInsets.only(right: 250),
               child: Text(" Colour: Navy Blue"),
             ),
             SizedBox(
@@ -1521,7 +1493,7 @@ class MensAccessoriesProduct10 extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Nice Belt ",
+                  "Nice Tie ",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Icon(

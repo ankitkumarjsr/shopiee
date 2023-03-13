@@ -4,6 +4,7 @@ import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
 import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a1.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a12.dart';
 import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a2.dart';
 import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a5.dart';
 import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a6.dart';
@@ -21,6 +22,9 @@ import '../../../models/GridView/FirstGrid/Components/Container3/Container3_Deta
 import '../../../models/GridView/FirstGrid/Components/Container3/mensaccessoriespagebuilder.dart';
 import '../../../models/poster_item_model.dart';
 import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
+import 'Payment_a10.dart';
+import 'Payment_a11.dart';
+import 'Payment_a9.dart';
 
 class MensAccessoriesProduct12 extends StatelessWidget {
   MensAccessoriesProduct12({Key? key}) : super(key: key);
@@ -47,9 +51,9 @@ class MensAccessoriesProduct12 extends StatelessWidget {
             SizedBox(height: 12,),
             Row(
               children:[
-                Text("   Visit The HORNBULL Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
+                Text("   Visit The Fastrack Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
 
-                SizedBox(width: 30,),
+                SizedBox(width:90,),
                 RatingBar.builder(
                   itemSize: 15,
                   initialRating: 4.5,
@@ -67,15 +71,15 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                   },
                 ),
                 SizedBox(width: 5,),
-                Text("3,458"),
+                Text("1,458"),
               ],
 
             ),
 
 
             Padding(
-              padding: const EdgeInsets.only(top: 8,right: 45),
-              child: Text("Hornbull Men's Casual Wear Caps"),
+              padding: const EdgeInsets.only(top: 8,right: 35),
+              child: Text("Mens Wear Casual Blue Framed Rounded Goggalles"),
             ),
 
             Row(
@@ -83,8 +87,8 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: CircleAvatar(backgroundColor: Colors.red.shade900,
-                      radius: 23,
-                      child: Text("  55% \n  off",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),)),
+                      radius: 22,
+                      child: Text("  23% \n  off",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
                 ),
                 SizedBox(width: 290,),
                 Padding(
@@ -95,7 +99,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                 ),],
             ),
 
-            Image(image: AssetImage(imgbg68i),height: 320,width:420,),
+            Image(image: AssetImage(imgbg86),height: 320,width:420,),
 
             Divider(
               thickness: 3,
@@ -118,7 +122,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "-55%",
+                    "-23%",
                     style: TextStyle(
                         fontSize: 28,
                         color: Colors.red,
@@ -128,7 +132,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                     width: 13,
                   ),
                   Text(
-                    "\u{20B9}225",
+                    "\u{20B9}1549",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -154,7 +158,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "\u{20B9}499",
+                    "\u{20B9}1999",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey.shade800,
@@ -173,9 +177,163 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
+            Divider(
+              thickness: 3,
+              color: Colors.grey,
+            ),
+            SizedBox(height: 5,),
+            Row(
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  "Colour: ",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                Text("Blue",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18)),
+              ],
+            ),
+            SizedBox(height: 10,),
+            Row(
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                Column(
+                  children: [
+                    // CircleAvatar(backgroundColor: Colors.black,radius: 33,child: CircleAvatar(radius: 30,backgroundImage: AssetImage(imgbg62),)),
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: CircleAvatar(backgroundColor: Colors.black,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg86),)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 60),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height*0.05,
+                          width: MediaQuery.of(context).size.width*0.24,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],),
+                    SizedBox(height: 5,),
+                    Row(
+                      children: [
+                        Text("-23% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        SizedBox(width: 10,),
+                        Text("\u{20B9}1549.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                      ],
+                    ),
+                    Text(
+                      "\u{20B9}1999.00",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade500,
+                          decoration: TextDecoration.lineThrough),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 18,),
+                Column(
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: CircleAvatar(backgroundColor: Colors.white,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg86),)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 60),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height*0.05,
+                          width: MediaQuery.of(context).size.width*0.24,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],),
+                    SizedBox(height: 10,),
+                    Row(
+                      children: [
+                        Text("-23% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        SizedBox(width: 10,),
+                        Text("\u{20B9}1549.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                      ],
+                    ),
+                    Text(
+                      "\u{20B9}1999.00",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade500,
+                          decoration: TextDecoration.lineThrough),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 18,),
+                Column(
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: CircleAvatar(backgroundColor: Colors.white,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg86),)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 60),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height*0.05,
+                          width: MediaQuery.of(context).size.width*0.24,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],),
+                    SizedBox(height: 10,),
+                    Row(
+                      children: [
+                        Text("-23% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
+                        SizedBox(width: 10,),
+                        Text("\u{20B9}1549.00",style: TextStyle(fontWeight: FontWeight.w500),),
+                      ],
+                    ),
+                    Text(
+                      "\u{20B9}1999.00",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade500,
+                          decoration: TextDecoration.lineThrough),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 25,),
+
+              ],
+            ),
 
             SizedBox(
-              height: 12,
+              height: 15,
             ),
             Divider(
               thickness: 3,
@@ -431,7 +589,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Paymenta8(),
+                    builder: (context) => Paymenta12(),
                   )),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
@@ -465,7 +623,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
               children: [
                 SizedBox(width: 15,),
                 Text("Sold By ",style: TextStyle(fontWeight: FontWeight.w500),),
-                Text("HornBull Infocom Pvt ",style: TextStyle(color:Colors.blue ,fontWeight: FontWeight.w500),),
+                Text("Fastrack Watches ",style: TextStyle(color:Colors.blue ,fontWeight: FontWeight.w500),),
                 Text("and ",style: TextStyle(fontWeight: FontWeight.w500),),
                 Text("Fulfilled by Shopiee.",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
               ],
@@ -561,12 +719,12 @@ class MensAccessoriesProduct12 extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height*0.2,
               width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 0.8)),
               child: Row(
                 children:[
                   SizedBox(width: 30,),
-                  Image(image: AssetImage(imgbg68i)),
-                  Text("+",style: TextStyle(fontSize: 30,color:Colors.grey),),
+                  Image(image: AssetImage(imgbg86,),width: 200,height: 120,),
+                  Text("+",style: TextStyle(fontSize: 26,color:Colors.grey),),
                   Image(image: AssetImage(imgbg83)),
                 ],
               ),
@@ -574,11 +732,11 @@ class MensAccessoriesProduct12 extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height*0.1,
               width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 0.8)),
               child: Row(
                 children: [
-                  SizedBox(width: 110,),
-                  Text("Buy Both:\u{20B9}649.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                  SizedBox(width: 90,),
+                  Text("Buy Both:\u{20B9}1999.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
                   SizedBox(width: 45,),
                   IconButton(onPressed: () => () {
 
@@ -598,7 +756,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height*0.40,
               width: MediaQuery.of(context).size.width*0.90,
-              child: Image(image: AssetImage(imgbg68i)),
+              child: Image(image: AssetImage(imgbg86)),
             ),
             SizedBox(height: 18,),
 
@@ -615,18 +773,19 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: <Color>[
-                            Colors.blue,
+                            Colors.pink,
+                            Colors.pink,
                             Colors.white,
                           ]),
                     ),
                     child: Center(
                         child: Text(
                           "Top Brand-",
-                          style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.limeAccent,fontWeight: FontWeight.bold),
                         )),
                   ),
                   Text(
-                    "HornBull",
+                    "Fastrack",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )
                 ],
@@ -708,9 +867,9 @@ class MensAccessoriesProduct12 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 310),
+              padding: const EdgeInsets.only(right: 320),
               child: Text(
-                "Cotton",
+                "Solid",
                 style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
               ),
             ),
@@ -1175,8 +1334,8 @@ class MensAccessoriesProduct12 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 275),
-              child: Text(" Colour: Navy Blue"),
+              padding: const EdgeInsets.only(right: 250),
+              child: Text(" Colour: Blue"),
             ),
             SizedBox(
               height: 5,
@@ -1283,12 +1442,12 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                   width: 15,
                 ),
                 CircleAvatar(
-                    maxRadius: 20, backgroundImage: AssetImage(imgbg73)),
+                    maxRadius: 20, backgroundImage: AssetImage(imgbg39)),
                 SizedBox(
                   width: 10,
                 ),
                 Text(
-                  "Paji151",
+                  "kadfph1po1",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -1336,7 +1495,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Nice Cap ",
+                  "Nice Goggles ",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Icon(
@@ -1372,7 +1531,7 @@ class MensAccessoriesProduct12 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 15),
               child: Text(
-                  "I encourage to more make quality good of the caps"),
+                  "I encourage to more make quality good of the belts"),
             ),
             SizedBox(
               height: 10,

@@ -1,1960 +1,333 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
-import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a1.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a2.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a5.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a6.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a7.dart';
-import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a8.dart';
-import 'package:shopiee/view/common/MensWearProductPg/payment_2.dart';
-import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
-import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Accessories.dart';
-import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories10.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories2.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories5.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories6.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories7.dart';
+import 'package:shopiee/view/common/MensWearProductPg/mens_wear_1.dart';
+import 'package:numeric_keyboard/numeric_keyboard.dart';
 
-import '../../../models/GridView/FirstGrid/Components/Container2/Mens_FootWearPageBuilder.dart';
-import '../../../models/GridView/FirstGrid/Components/Container3/Container3_Details.dart';
-import '../../../models/GridView/FirstGrid/Components/Container3/mensaccessoriespagebuilder.dart';
-import '../../../models/poster_item_model.dart';
-import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
-import 'Payment_a9.dart';
-
-class MensAccessoriesProduct10 extends StatelessWidget {
-  MensAccessoriesProduct10({Key? key}) : super(key: key);
+import 'mens_accessories8.dart';
+import 'mens_accessories9.dart';
 
 
-  final controller = PageController( keepPage: true);
+class Paymenta10 extends StatelessWidget {
+  Paymenta10({Key? key}) : super(key: key);
+
+  TextEditingController Addresscontroller=TextEditingController();
+  TextEditingController PhoneNocontroller=TextEditingController();
+  final formkey=GlobalKey<FormState>();
+  final formkey1=GlobalKey<FormState>();
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue.shade800,
-        leading: IconButton(
-            onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MensAccessories(),
-                )),
-            icon: Icon(Icons.arrow_back)),
-        title: Text("Product Page"),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 12,),
-            Row(
-              children:[
-                Text("   Visit The Rocox Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
-
-                SizedBox(width:90,),
-                RatingBar.builder(
-                  itemSize: 15,
-                  initialRating: 4.5,
-                  minRating: 4.5,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                  itemBuilder: (context, index) => Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                  ),
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
+    return SafeArea(
+        child: Scaffold(
+          appBar:AppBar(
+              toolbarHeight: 75,
+              automaticallyImplyLeading: false,
+              elevation: 0,
+              backgroundColor:Colors.amber,
+              title: Text(
+                " Payment",
+                style: TextStyle(
+                    color: Color.fromRGBO(3, 35, 56, 1.0),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(45),
                 ),
-                SizedBox(width: 5,),
-                Text("1,458"),
-              ],
-
-            ),
-
-
-            Padding(
-              padding: const EdgeInsets.only(top: 8,right: 45),
-              child: Text("Rocox Men's Brown Leather Belt Of PREMIUM Quality"),
-            ),
-
-            Row(
-              children:[
+              ),
+              actions: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: CircleAvatar(backgroundColor: Colors.red.shade900,
-                      radius: 21,
-                      child: Text("  8% \n  off",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)),
+                  padding: const EdgeInsets.only(right: 19,top: 26),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => MensAccessoriesProduct10(),));
+                    },
+                    child: Text("Cancel",style: TextStyle(fontSize: 18,color: Color.fromRGBO(3, 35, 56, 1.0),),
+                    ),
+                  ),
                 ),
-                SizedBox(width: 290,),
-                Padding(
-                  padding: const EdgeInsets.only(top: 0.1),
-                  child: Container(
-                      decoration: BoxDecoration(shape: BoxShape.circle,border: Border.all(color: Colors.black)),
-                      child: Icon(Icons.share_rounded,color: Colors.black,)),
-                ),],
-            ),
+              ]
+          ),
 
-            Image(image: AssetImage(imgbg84),height: 320,width:420,),
-
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
-            ),
-            Row(
+          body: SingleChildScrollView(
+            child: Column(
               children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Text("Deal",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 20),),
-              ],
-            ),
-
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "-8%",
-                    style: TextStyle(
-                        fontSize: 28,
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    width: 13,
-                  ),
-                  Text(
-                    "\u{20B9}1250",
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "M.R.P.:",
-                    style: TextStyle(
-                        color: Colors.grey.shade800,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "\u{20B9}1399",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade800,
-                        decoration: TextDecoration.lineThrough),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 240),
-              child: Text(
-                "Inclusive of all taxes",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-            ),
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  "Colour: ",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                Text("Brown",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18)),
-              ],
-            ),
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(
-                  width: 20,
-                ),
-                Column(
-                  children: [
-                    // CircleAvatar(backgroundColor: Colors.black,radius: 33,child: CircleAvatar(radius: 30,backgroundImage: AssetImage(imgbg62),)),
-                    Stack(children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: CircleAvatar(backgroundColor: Colors.black,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg84),)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 60),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height*0.05,
-                          width: MediaQuery.of(context).size.width*0.24,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],),
-                    SizedBox(height: 5,),
-                    Row(
-                      children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
-                        SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
-                      ],
-                    ),
-                    Text(
-                      "\u{20B9}1399.00",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.shade500,
-                          decoration: TextDecoration.lineThrough),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 25,),
-                Column(
-                  children: [
-                    Stack(children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: CircleAvatar(backgroundColor: Colors.white,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg84),)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 60),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height*0.05,
-                          width: MediaQuery.of(context).size.width*0.24,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],),
-                    SizedBox(height: 10,),
-                    Row(
-                      children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
-                        SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
-                      ],
-                    ),
-                    Text(
-                      "\u{20B9}1399.00",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.shade500,
-                          decoration: TextDecoration.lineThrough),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 25,),
-                Column(
-                  children: [
-                    Stack(children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: CircleAvatar(backgroundColor: Colors.white,radius: 34,child: CircleAvatar(radius: 31,backgroundImage: AssetImage(imgbg84),)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 60),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height*0.05,
-                          width: MediaQuery.of(context).size.width*0.24,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0),color: Colors.pink,border: Border.all(color: Colors.lime,width: 3)),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Text(" Limited Time",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],),
-                    SizedBox(height: 10,),
-                    Row(
-                      children: [
-                        Text("-8% ",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500),),
-                        SizedBox(width: 10,),
-                        Text("\u{20B9}1250.00",style: TextStyle(fontWeight: FontWeight.w500),),
-                      ],
-                    ),
-                    Text(
-                      "\u{20B9}1399.00",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.shade500,
-                          decoration: TextDecoration.lineThrough),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 25,),
-
-              ],
-            ),
-
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(width: 12,),
-                Text("Size:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
-                Text("26'' to 44'' Waist Adjustable",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-              ],
-            ),
-            SizedBox(height: 15,),
-            Row(
-              children:[
-                SizedBox(width: 12,),
+                SizedBox(height: 10,),
                 Container(
-                  height: 40,
-                  width: 180,
-                  color: Colors.black,
-                  child: Center(child: Text("26'' to 44'' Waist Adjustable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),)),
-                ),
-                SizedBox(width: 12,),
-                Container(
-                  height: 40,
-                  width: 180,
-                  decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
-                  child: Center(child: Text("46'' to 54'' Waist Adjustable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.black),)),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
-            ),
-            Row(
-              children: [
-                SizedBox(width: 12,),
-                CircleAvatar(
-
-                  backgroundColor: Colors.lime,
-                  child: Icon(Icons.percent_outlined,color: Colors.black,),),
-                SizedBox(width: 8,),
-                Text("Save Extra",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-              ],
-            ),
-            SizedBox(height: 10,),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.15,
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () => Navigator,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Center(
-                        child: Container(
-                          width: MediaQuery.of(context).size.width*0.40,
-                          height: 155,
-                          decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
-
-                          child: Column(
+                  width: double.infinity,
+                  child: Column(
+                    children: [
+                      Row(
+                        children:[
+                          Column(
                             children: [
-                              SizedBox(height: 5,),
-                              Row(
-                                children:[
-                                  SizedBox(width: 4,),
-                                  Text(firstlistdetails[index].icon,style: TextStyle(fontWeight: FontWeight.w500)),
-                                  SizedBox(width: 2,),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 10),
-                                    child: Text(firstlistdetails[index].heading,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                  ),],
-                              ),
-
-                              SizedBox(height: 3,),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 5),
-                                child: Text(firstlistdetails[index].description,style: TextStyle(fontWeight: FontWeight.w500),),
-                              ),
-                              SizedBox(height: 12,),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 60),
-                                child: Text(firstlistdetails[index].more,style: TextStyle(color: Colors.blue.shade700,fontWeight: FontWeight.w500),),
+                              Image(image: AssetImage(imgbg87),
+                                height: MediaQuery.of(context).size.height*0.18,
+                                width: MediaQuery.of(context).size.width*0.3,
                               ),
                             ],
                           ),
-                        ),
-                      ),
-                    ),
-                  );
-                },
-                scrollDirection: Axis.horizontal,
-                itemCount: mensfootsize.length,
-              ),
-            ),
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "FREE delievery",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue.shade900),
-                  ),
-                  Text(" Tuesday,  15 April",style: TextStyle(fontWeight: FontWeight.bold),),
-                  Text(" on first order.",style: TextStyle(fontWeight: FontWeight.w400),),
-
-                ],
-              ),
-            ),
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.only(right: 310),
-              child: Text(
-                "Details",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue.shade900),
-              ),
-            ),
-            SizedBox(height: 12,),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "or fastest delievery",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400),
-                  ),
-                  Text(" Tommorow,  12 April",style: TextStyle(fontWeight: FontWeight.bold),),
-
-                ],
-              ),
-            ),
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "Order Within",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400),
-                  ),
-                  Text(" 5 hrs 21 mins.",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
-                  Text(
-                    " Details",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue.shade900),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children:[
-                SizedBox(width: 9,),
-                Icon(Icons.location_on_outlined,color: Colors.black,),
-                Text("  Deliver To Ankit - Jamshedpur 832108",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue.shade900),),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Text(
-                    "In Stock",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.green),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-              //   onTap: () {
-              //     showDialog(
-              //       context: context,
-              //       builder: (BuildContext dialogContext) {
-              //         return ListTile(title: Text("ftf"),);
-              //           // AlertDialog(
-              //   backgroundColor: Colors.grey.shade300,
-              //   content: Text('Product Added To Cart Successfully!!'),
-              //   actions: <Widget>[
-              //     TextButton(
-              //       child: Text('Ok'),
-              //       onPressed: () {
-              //         Navigator.of(dialogContext)
-              //             .pop(); // Dismiss alert dialog
-              //       },
-              //     ),
-              //   ],
-              // );
-              //       },
-              //     );
-              //   },
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Row(
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height*0.05,
-                      width: MediaQuery.of(context).size.width*0.19,
-                      color: Colors.grey.shade300,
-                      child: Center(
-                        child: Row(
-                          children: [
-                            Text("  Qty: 1",style: TextStyle(fontWeight: FontWeight.w500),),
-                            Icon(Icons.keyboard_arrow_down_outlined),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 40,),
-                    Text("\u{20B9}20 cashback for every extra unit \nyou buy (Up to \u{20B9}60)",style: TextStyle(fontWeight: FontWeight.w500),)
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext dialogContext) {
-                    return AlertDialog(
-                      backgroundColor: Colors.grey.shade300,
-                      content: Text('Product Added To Cart Successfully!!'),
-                      actions: <Widget>[
-                        TextButton(
-                          child: Text('Ok'),
-                          onPressed: () {
-                            Navigator.of(dialogContext)
-                                .pop(); // Dismiss alert dialog
-                          },
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(75),
-                      color: Colors.amber),
-                  child: Center(
-                    child: Text(
-                      "Add To Cart",
-                      textAlign: TextAlign.center,
-                      style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            InkWell(
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Paymenta9(),
-                  )),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(75),
-                      color: Colors.orange),
-                  child: Center(
-                    child: Text(
-                      "Buy Now",
-                      textAlign: TextAlign.center,
-                      style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 12,),
-            Row(
-              children: [
-                SizedBox(width: 10,),
-                Icon(Icons.lock,color: Colors.grey,),
-                SizedBox(width: 11,),
-                Text("Secure Transaction",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
-              ],
-            ),
-            SizedBox(height: 8,),
-            Row(
-              children: [
-                SizedBox(width: 15,),
-                Text("Sold By ",style: TextStyle(fontWeight: FontWeight.w500),),
-                Text("Racox Infocom Pvt ",style: TextStyle(color:Colors.blue ,fontWeight: FontWeight.w500),),
-                Text("and ",style: TextStyle(fontWeight: FontWeight.w500),),
-                Text("Fulfilled by Shopiee.",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
-              ],
-            ),
-            SizedBox(height: 12,),
-            Container(
-              padding: const EdgeInsets.only(left: 10),
-              // color: Colors.grey,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  color: Colors.grey.shade500),
-              height: 50,
-              width: double.infinity,
-              child: Row(
-                children: <Widget>[
-                  // CircleAvatar(backgroundImage:AssetImage(imgbg18)),
-                  Container(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.white),
-                    padding: const EdgeInsets.all(5),
-                    width: 44,
-                    height: 74,
-                    child: Image.asset(imgbg18),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text(" PAY ON \n DELIVERY", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
-                  const SizedBox(
-                    width: 18,
-                  ),
-                  Container(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.white),
-                    padding: const EdgeInsets.all(6),
-                    width: 44,
-                    height: 74,
-                    child: Image.asset(imgbg19),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text(" EASY \n RETURNS", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
-                  const SizedBox(
-                    width: 18,
-                  ),
-
-                  Container(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.white),
-                    padding: const EdgeInsets.all(6),
-                    width: 44,
-                    height: 74,
-                    child: Image.asset(imgbg20),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text(" FREE DELIVERY \n ON FIRST ORDER",
-                      style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold))
-                ],
-              ),
-            ),
-
-            SizedBox(height: 5,),
-            Divider(thickness: 3,color: Colors.grey,),
-            Padding(
-              padding: const EdgeInsets.only(right: 310),
-              child: Text("Sponsored",style: TextStyle(color: Colors.grey),),
-            ),
-            Row(
-              children: [
-                Image(image: AssetImage(imgbg70),height: 150,width: 180,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Handcuffs Winter Knit Beanie\nCap Hat Neck Warmer Scarf \nand Touchscreen Gloves \nSet for M...",style: TextStyle(fontWeight: FontWeight.w500),),
-                    SizedBox(height: 5,),
-                    Text("\u{20B9}599.00",style: TextStyle(color: Colors.red),),
-                    SizedBox(height: 5,),
-                    Text("✓Prime",style: TextStyle(color: Colors.blue.shade800),)
-                  ],
-                ),
-              ],
-            ),
-            Divider(thickness: 3,color: Colors.grey,),
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.only(right: 100),
-              child: Text("Frequently Brought Together",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
-            ),
-            SizedBox(height: 10,),
-            Container(
-              height: MediaQuery.of(context).size.height*0.2,
-              width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
-              child: Row(
-                children:[
-                  SizedBox(width: 30,),
-                  Image(image: AssetImage(imgbg84)),
-                  Text("+",style: TextStyle(fontSize: 30,color:Colors.grey),),
-                  Image(image: AssetImage(imgbg83)),
-                ],
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height*0.1,
-              width: MediaQuery.of(context).size.width*0.9,
-              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
-              child: Row(
-                children: [
-                  SizedBox(width: 90,),
-                  Text("Buy Both:\u{20B9}1649.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
-                  SizedBox(width: 45,),
-                  IconButton(onPressed: () => () {
-
-                  }, icon: Icon(Icons.keyboard_arrow_down,color: Colors.black,))
-                ],
-              ),
-            ),
-            SizedBox(height: 5,),
-            Divider(thickness: 3,color: Colors.grey,),
-
-            SizedBox(height: 5,),
-            Padding(
-              padding: const EdgeInsets.only(right: 145),
-              child: Text("Product image gallery ",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-            ),
-            SizedBox(height: 18,),
-            Container(
-              height: MediaQuery.of(context).size.height*0.40,
-              width: MediaQuery.of(context).size.width*0.90,
-              child: Image(image: AssetImage(imgbg84)),
-            ),
-            SizedBox(height: 18,),
-
-            Divider(thickness: 2,color: Colors.grey,),
-            Padding(
-              padding: const EdgeInsets.only(left: 18),
-              child: Row(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.025,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: <Color>[
-                            Colors.pink,
-                            Colors.pink,
-                            Colors.white,
-                          ]),
-                    ),
-                    child: Center(
-                        child: Text(
-                          "Top Brand-",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
-                        )),
-                  ),
-                  Text(
-                    "RACOX",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  88% positive rating from 5K+ customers.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  1.5K+ recent orders from this brand.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  2.5+ years on shopiee.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            Divider(thickness: 3,color: Colors.grey,),
-            Padding(
-              padding: const EdgeInsets.only(right: 200),
-              child: Text("Features & details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 275),
-              child: Text(
-                "Material Type",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 270),
-              child: Text(
-                "Faux Leather",
-                style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 330),
-              child: Text(
-                "Style",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 305),
-              child: Text(
-                "Regular",
-                style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 280),
-              child: Text(
-                "Closure Type",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 275),
-              child: Text(
-                "No Closure",
-                style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 233),
-              child: Text(
-                "Country Of Origin",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 310),
-              child: Text(
-                "India",
-                style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
-              ),
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 250),
-              child: Text(
-                "About This Item",
-                style:
-                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Icon(Icons.stop, size: 15),
-                  Text(
-                    "Premium Export Quality 320 GSM Biowashed Cotton \nwith Brushed Fleece Inside and Belly Pockets. Long\n-lasting anti-fading high-definition Digital Prints",
-                    style: TextStyle(fontSize: 14),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Icon(Icons.stop, size: 15),
-                  Text(
-                    "Please check both our tshirts and hoodie SIZE CHARTS \nbefore ordering - hoodies are generally worn a bit \nloose compared to tshirts, so you'll \nideally need to pick Chest Size+2 inches.)",
-                    style: TextStyle(fontSize: 14),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Icon(Icons.stop, size: 15),
-                  Text(
-                    "We recommend you to check our complete collection \non our insta/site.We print custom designs not just on \ntshirts but on everything.",
-                    style: TextStyle(fontSize: 14),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 270),
-              child: Text(
-                "Description",
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 18),
-            //   child: Text(
-            //       This winter Indian homegrown brand ADRO brings you the best quality 100% cotton hooded sweatshirts
-            //       to keep you warm. Made in India Product for the Indian market at the Best Prices. Pair it with Jeans/Joggers or
-            //        Shorts and this sweatshirts/hoodie made of soft fabric will make other guys go green with envy. We at ADRO offers
-            //        Top Quality casual wear in the widest variety which makes it easy to choose and at the prices that are easy to reach.
-            //        ADRO products are made of Premium Fabrics which are Eco-Friendly to ensure the Best Quality and Great Comfort.
-            //        ADRO deals in Men's Sweatshirts, Men's Printed T-Shirts, Full Sleeve T-Shirts, Polo T-Shirts, Hoodies for men.
-            //       We also in plan to add Men's Shirts, Jeans and Chinos/Shorts to keep you updated with trends. ADRO - Keep Inventing!!),
-            // ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12),
-              child: ReadMoreText(
-                "Our designs are not the usual pop culture trends, but our own twisty interpretation of trending themes.",
-                trimLines: 1,
-                colorClickableText: Colors.pink,
-                trimMode: TrimMode.Line,
-                trimCollapsedText: 'Show more',
-                trimExpandedText: 'Show less',
-                style: TextStyle(fontWeight: FontWeight.w500),
-                moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Divider(
-              thickness: 2,
-              color: Colors.grey,
-            ),
-
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 200),
-              child: Text(
-                "Customer reviews",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: RatingBar.builder(
-                    itemSize: 30,
-                    initialRating: 4.5,
-                    minRating: 4.5,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                    itemBuilder: (context, index) => Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                ),
-                SizedBox(
-                  width: 12,
-                ),
-                Text(
-                  "3.5 out of 5",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-                SizedBox(
-                  width: 80,
-                ),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.black,
-                  size: 16,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 230),
-              child: Text(
-                "32 global ratings",
-                style: TextStyle(color: Colors.grey.shade800),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 100),
-              child: Text(
-                "Highly Rated By Customers For",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                children: [
-                  Container(
-                    color: Colors.grey.shade300,
-                    height: MediaQuery.of(context).size.height * 0.03,
-                    width: 140,
-                    child: Center(
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Icon(
-                            Icons.thumb_up_alt_outlined,
-                            color: Colors.black,
-                            size: 18,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            " Good Quality",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Men's Woven PATTERN Tie",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                                SizedBox(height: MediaQuery.of(context).size.height*0.014,),
+                                Row(
+                                  children: [
+                                    Text("\u{20B9}699",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 20),),
+                                    SizedBox(width: 8,),
+                                    Text("\u{20B9}999",style: TextStyle(fontSize: 20,decoration: TextDecoration.lineThrough,color: Colors.grey.shade600),),
+                                  ],
+                                ),
+                                SizedBox(height: MediaQuery.of(context).size.height*0.014,),
+                                Text("Save: \u{20B9} 300.00 (30%)",style: TextStyle(fontSize: 17,fontWeight: FontWeight.w500,color: Colors.red),),
+                                SizedBox(height: MediaQuery.of(context).size.height*0.014,),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 40),
+                                  child: Text("Sold By Retreez Limited",style: TextStyle(color: Colors.grey.shade700),),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    color: Colors.grey.shade300,
-                    height: MediaQuery.of(context).size.height * 0.03,
-                    width: 199,
-                    child: Center(
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Icon(
-                            Icons.thumb_up_alt_outlined,
-                            color: Colors.black,
-                            size: 18,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            "Comfortable Product",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 190),
-              child: Container(
-                color: Colors.grey.shade300,
-                height: MediaQuery.of(context).size.height * 0.03,
-                width: 170,
-                child: Center(
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.thumb_up_alt_outlined,
-                        color: Colors.black,
-                        size: 18,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        " Value For Money",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
+                      Divider(thickness: 1.5,color: Colors.grey,),
                     ],
                   ),
                 ),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Divider(
-              thickness: 1,
-              color: Colors.grey,
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
+                ListTile(leading: Text("1 item",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.amber),),
+                  title: Text("View Details",style: TextStyle(fontWeight: FontWeight.w500),),
+                  subtitle: Text("Add Gifts Options"),
+                  trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
+                  onTap:  () => Navigator.push(context, MaterialPageRoute(builder: (context) => MensWearProduct1(),)),
+                ),
+                Divider(thickness: 1.5,color: Colors.grey,),
+                ListTile(
+                  leading: Text("Get it by",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.amber),),
+                  title: Text("Day After Tommorow",style: TextStyle(fontWeight: FontWeight.w500),),
+                  subtitle: Text("Free Delievery With Your Prime Membership"),
+                  trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
+                  onTap:  () => Navigator.push(context, MaterialPageRoute(builder: (context) => MensWearProduct1(),)),
+                ),
+                Divider(thickness: 1.5,color: Colors.grey,),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Text(
-                    "Top reviews from India",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Row(
+                    children: [
+                      Text(" 𝙀𝙣𝙩𝙚𝙧 𝙔𝙤𝙪𝙧 𝘿𝙚𝙩𝙖𝙞𝙡𝙨",style: TextStyle(fontSize: 24),),
+                      SizedBox(width: 10,),
+                      Icon(Icons.save_as_outlined,color: Colors.black)
+                    ],
                   ),
                 ),
-                SizedBox(width: 25,),
-                Container(
-                  decoration: BoxDecoration(border: Border.all(color: Colors.black54)),
-                  height: 43,
-                  width: 66,
-                  child: Image(
-                    image: AssetImage(imgbgin),
-                    fit: BoxFit.cover,
-
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 15,
-                ),
-                Icon(
-                  Icons.person_2_rounded,
-                  color: Colors.grey,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Shopiee Customer",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
+                SizedBox(height: 10,),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: RatingBar.builder(
-                    itemSize: 20,
-                    initialRating: 5,
-                    minRating: 5,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 0.0),
-                    itemBuilder: (context, index) => Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Verified Purchase",
-                  style: TextStyle(
-                      color: Colors.pinkAccent, fontWeight: FontWeight.w500),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  "Loved It",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                Icon(
-                  Icons.favorite,
-                  color: Colors.pink,
-                ),
-                Icon(
-                  Icons.favorite,
-                  color: Colors.pink,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 140),
-              child: Text(
-                "Reviewed in India on 10 June 2022",
-                style: TextStyle(color: Colors.grey.shade800),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 275),
-              child: Text(" Colour: Navy Blue"),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text(
-                  " Quality of this product is awesome. i totally loved this product"),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 25,
-                ),
-                InkWell(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext dialogContext) {
-                        return AlertDialog(
-                          backgroundColor: Colors.grey.shade300,
-                          content: Text('Thanks'),
-                          actions: <Widget>[
-                            TextButton(
-                              child: Text('Ok'),
-                              onPressed: () {
-                                Navigator.of(dialogContext)
-                                    .pop(); // Dismiss alert dialog
-                              },
-                            ),
-                          ],
-                        );
+                  padding: const EdgeInsets.only(left: 10,right: 10),
+                  child: Form(
+                    key:formkey1 ,
+                    child: TextFormField(
+                      validator: (value) {
+                        if(value!.isEmpty){
+                          return "Address cannot be empty";
+                        }
                       },
-                    );
-                  },
-                  child: Container(
-                    height: 35,
-                    width: 65,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.blue),
-                    child: Center(
-                      child: Text(
-                        "Helpful",
-                        textAlign: TextAlign.center,
-                        style:
-                        TextStyle( color: Colors.white,fontWeight: FontWeight.bold),
+                      controller: Addresscontroller,
+                      cursorColor: Colors.black,
+                      style:  const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                      decoration:  const InputDecoration(
+                        filled: true,
+                        // fillColor: Colors.grey,
+                        labelText: "Enter Delievery Address",
+                        prefixIcon: Icon(
+                          Icons.place_outlined,
+                          color: Colors.black,
+                          size: 30,
+                        ),
+                        labelStyle: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.pink),
+                        ),
                       ),
                     ),
                   ),
                 ),
-
-                SizedBox(width: 15,),
-                InkWell(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext dialogContext) {
-                        return AlertDialog(
-                          backgroundColor: Colors.grey.shade300,
-                          content: Text('Thanks'),
-                          actions: <Widget>[
-                            TextButton(
-                              child: Text('Ok'),
-                              onPressed: () {
-                                Navigator.of(dialogContext)
-                                    .pop(); // Dismiss alert dialog
-                              },
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: Container(
-                    height: 35,
-                    width: 65,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.blue),
-                    child: Center(
-                      child: Text(
-                        "Report",
-                        textAlign: TextAlign.center,
-                        style:
-                        TextStyle( color: Colors.white70,fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            SizedBox(
-              height: 20,
-            ),
-
-            Row(
-              children: [
-                SizedBox(
-                  width: 15,
-                ),
-                CircleAvatar(
-                    maxRadius: 20, backgroundImage: AssetImage(imgbg43)),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "akash1po1",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
+                SizedBox(height: 10,),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: RatingBar.builder(
-                    itemSize: 20,
-                    initialRating: 4,
-                    minRating: 4,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 0.0),
-                    itemBuilder: (context, index) => Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Verified Purchase",
-                  style: TextStyle(
-                      color: Colors.pinkAccent, fontWeight: FontWeight.w500),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  "Nice Belt ",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.thumb_up,
-                  color: Colors.amber,
-                ),
-                Icon(
-                  Icons.thumb_up,
-                  color: Colors.amber,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 110),
-              child: Text(
-                "Reviewed in India on 4 December 2021",
-                style: TextStyle(color: Colors.grey.shade800),
-              ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-
-
-
-
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 15),
-              child: Text(
-                  "I encourage to more make quality good of the belts"),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 25,
-                ),
-                InkWell(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext dialogContext) {
-                        return AlertDialog(
-                          backgroundColor: Colors.grey.shade300,
-                          content: Text('Thanks'),
-                          actions: <Widget>[
-                            TextButton(
-                              child: Text('Ok'),
-                              onPressed: () {
-                                Navigator.of(dialogContext)
-                                    .pop(); // Dismiss alert dialog
-                              },
-                            ),
-                          ],
-                        );
+                  padding: const EdgeInsets.only(left: 10,right: 10),
+                  child: Form(
+                    key: formkey,
+                    child: TextFormField(
+                      validator: (value) {
+                        if(value!.isEmpty || value.length<10){
+                          return "Invalid Number";
+                        }
                       },
-                    );
-                  },
-                  child: Container(
-                    height: 35,
-                    width: 65,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.blue),
-                    child: Center(
-                      child: Text(
-                        "Helpful",
-                        textAlign: TextAlign.center,
-                        style:
-                        TextStyle( color: Colors.white,fontWeight: FontWeight.bold),
+                      controller: PhoneNocontroller,
+                      keyboardType: TextInputType.number,
+                      cursorColor: Colors.black,
+                      style:  const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                      decoration:  const InputDecoration(
+                        filled: true,
+                        // fillColor: Colors.grey,
+                        labelText: "Enter Phone Number",
+                        prefix: Text("+91 "),
+                        prefixIcon: Icon(
+                          Icons.phone_android,
+                          color: Colors.black,
+                          size: 30,
+                        ),
+                        labelStyle: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.pink),
+                        ),
                       ),
                     ),
                   ),
                 ),
-
-                SizedBox(width: 15,),
-                InkWell(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext dialogContext) {
-                        return AlertDialog(
-                          backgroundColor: Colors.grey.shade300,
-                          content: Text('Thanks'),
-                          actions: <Widget>[
-                            TextButton(
-                              child: Text('Ok'),
-                              onPressed: () {
-                                Navigator.of(dialogContext)
-                                    .pop(); // Dismiss alert dialog
-                              },
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: Container(
-                    height: 35,
-                    width: 65,
+                Divider(thickness: 1.5,color: Colors.grey,),
+                Padding(
+                  padding: const EdgeInsets.only(right: 70),
+                  child: Text("Select a payment method",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 26),),
+                ),
+                SizedBox(height: 8,),
+                Container(alignment: Alignment.center,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.blue),
-                    child: Center(
-                      child: Text(
-                        "Report",
-                        textAlign: TextAlign.center,
-                        style:
-                        TextStyle( color: Colors.white70,fontWeight: FontWeight.bold),
-                      ),
-                    ),
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(15.0)),
+                    width: MediaQuery.of(context).size.width*0.95,
+                    height: MediaQuery.of(context).size.height*0.06,
+                    child: Text("Continue",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400),)),
+
+                SizedBox(height: 12,),
+                Padding(
+                  padding: const EdgeInsets.only(right: 280),
+                  child: Text("Shopiee Pay",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey.shade800),),
+                ),
+                SizedBox(height: 15,),
+                Padding(
+                  padding: const EdgeInsets.only(right: 15,left: 15),
+                  child: ListTile(
+                    leading: Icon(Icons.not_interested_outlined,color: Colors.black,),
+                    title: Text("UPI/Netbanking",style: TextStyle(fontWeight: FontWeight.w500),),
+                    subtitle: Text("Currently Unavaliable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.red),),
+                    trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
+                    shape: RoundedRectangleBorder(side: BorderSide(color: Colors.black,width: 1)),
                   ),
                 ),
+                SizedBox(height:15,),
+                Padding(
+                  padding: const EdgeInsets.only(right: 230),
+                  child: Text("MORE WAYS TO PAY",style: TextStyle(fontWeight: FontWeight.bold),),
+                ),
+                SizedBox(height:12,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15,right: 15),
+                  child: ListTile(
+                    leading: Icon(Icons.not_interested_outlined,color: Colors.black,),
+                    title: Text("Pay With Debit/Credit/ATM Cards",style: TextStyle(fontWeight: FontWeight.w500),),
+                    subtitle: Text("Currently Unavaliable",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.red),),
+                    trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
+                    shape: RoundedRectangleBorder(side: BorderSide(color: Colors.black,width: 1)),
+                  ),
+                ),
+                SizedBox(height:17,),
+                Padding(
+                  padding: const EdgeInsets.only(right: 320),
+                  child: Text("Default*",style: TextStyle(fontWeight: FontWeight.w500),),
+                ),
+                SizedBox(height:7,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15,right: 15),
+                  child: ListTile(
+                    leading: Icon(Icons.check_box,color: Colors.black,),
+                    title: Text("Cash On Delievery/Pay On Delievery",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500),),
+                    subtitle: Text("Scan & Pay using Shopiee App.Cash,UPI,Cards also accepted.",style: TextStyle(color: Colors.black),),
+                    trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
+                    shape: RoundedRectangleBorder(side: BorderSide(color: Colors.black,width: 1)),
+                  ),
+                ),
+                SizedBox(height:15,),
+                InkWell(
+                  onTap: () async{
+                    if(formkey.currentState!.validate() && formkey1.currentState!.validate() )
+                    {
+                      await showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Wrap(
+                            children: [
+                              Container(height: 600,
+                                decoration: new BoxDecoration(
+                                  // color: Colors.redAccent,
+                                    borderRadius:BorderRadius.only(topLeft: Radius.circular(25.0),topRight: Radius.circular(25.0)),
+                                    border: Border.all(color: Colors.lime,width: 7)
+                                ),
+                                child: Column(
+                                  children: [
+                                    Image(image: AssetImage(imgbg22ii)),
+                                    Image(image: AssetImage(imgbg22iii)),
+                                  ],
+                                ),
+                              ),
+
+                            ],
+                          );
+                        },
+                      );
+                    }
+                  },
+                  child: Container(alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(15.0)),
+                      width: MediaQuery.of(context).size.width*0.95,
+                      height: MediaQuery.of(context).size.height*0.06,
+                      child: Text("Continue",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w400),)),
+                ),
+
+                SizedBox(height:20,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15,right: 15),
+                  child: ListTile(
+                    leading: Image(
+                        image: AssetImage(imgbg22i)),
+                    title: Text("100% Purchase Protection",style: TextStyle(fontWeight: FontWeight.w500),),
+                    subtitle: Text("Original Products | Secure Payments",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
+                    shape: RoundedRectangleBorder(side: BorderSide(color: Colors.black,width: 1),borderRadius: BorderRadius.circular(5.0)),
+                  ),
+                ),
+
+                SizedBox(height: 50,),
+
               ],
             ),
-            SizedBox(height: 10,),
-            Divider(thickness: 1,color: Colors.grey,),
-            InkWell(
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext dialogContext) {
-                    return AlertDialog(
-                      backgroundColor: Colors.grey.shade300,
-                      content: Text('Not More Than Two Reviews Are There Till Now'),
-                      actions: <Widget>[
-                        TextButton(
-                          child: Text('Ok'),
-                          onPressed: () {
-                            Navigator.of(dialogContext)
-                                .pop(); // Dismiss alert dialog
-                          },
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              child: ListTile(
-                leading: Text("See all reviews",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
-              ),
-            ),
-            Divider(thickness: 1,color: Colors.grey,),
-
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 100),
-              child: Text("Looking For A Specific Info?",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12),
-              child: TextFormField(
-                cursorColor: Colors.black,
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.black,
-                  ),
-                  labelText: "Search in reviews, Q&A....",
-                  focusedBorder: OutlineInputBorder(
-                      borderSide:
-                      const BorderSide(color: Colors.blue, width: 2.0),
-                      borderRadius: BorderRadius.circular(15.0)),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide:
-                      const BorderSide(color: Colors.black, width: 2.0),
-                      borderRadius: BorderRadius.circular(15.0)),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 200),
-              child: Text(
-                "Customer Question",
-                style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.55,
-              width: 330,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(imgbg5), fit: BoxFit.cover),
-                  border: Border.all(color: Colors.black),
-                  borderRadius: BorderRadius.circular(15.0)),
-              child: Column(
-                children: [
-                  SizedBox(height: 12),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 170),
-                    child: Text(
-                      "Q: What is fabric",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13),
-                    child: Row(
-                      children: [
-                        Text(
-                          "A:",
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 2,
-                        ),
-                        Text(
-                          "  100% Cotton 300 GSM Fabric",
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 26,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.white,
-                          size: 26,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 105),
-                    child: Text(
-                      " SELLER   |  6 months ago",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      "Q: My age is 18 which which size should i buy",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13),
-                    child: Row(
-                      children: [
-                        Text(
-                          "A:",
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "  Please buy a medium size",
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 50,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.white,
-                          size: 26,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 105),
-                    child: Text(
-                      " SELLER   |  9 months ago",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      "Q: Is XXL Size avaliable for this hoodie",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13),
-                    child: Row(
-                      children: [
-                        Text(
-                          "A:",
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "  No Sir",
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 205,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.white,
-                          size: 26,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 105),
-                    child: Text(
-                      " SELLER   |  1 months ago",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      "Q: Is there COD Avaliable for this product",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 13),
-                    child: Row(
-                      children: [
-                        Text(
-                          "A:",
-                          style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "  No Sir,Only Online Payments",
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 27,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.white,
-                          size: 26,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 105),
-                    child: Text(
-                      " SELLER   |  2 months ago",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 100,
-            ),
-          ],
-        ),
-      ),
+          ),
+        )
     );
   }
 }
