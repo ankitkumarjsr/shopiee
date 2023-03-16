@@ -3,10 +3,18 @@ import 'package:shopiee/models/GridView/FirstGrid/Components/Container2/Containe
 import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories1.dart';
 import 'package:shopiee/view/common/MensAccessoriesProductPg/mens_accessories2.dart';
 import 'package:shopiee/view/common/MensFootWearProductPg/mens_footwear_1.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_1.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_2.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_3.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_4.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_5.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_7.dart';
+import 'package:shopiee/view/common/MensSuitsProductPg/mens_suit_product_8.dart';
 import 'package:shopiee/view/common/MensWearProductPg/mens_wear_1.dart';
 import 'package:shopiee/view/common/MensWearProductPg/mens_wear_14.dart';
 import 'package:shopiee/view/common/MensWearProductPg/mens_wear_16.dart';
 import 'package:shopiee/view/common/MensWearProductPg/mens_wear_17.dart';
+import 'package:shopiee/view/common/WomensWearProductPg/womens_wear_product_5.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Accessories.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Footwears.dart';
@@ -35,6 +43,9 @@ import '../view/common/MensFootWearProductPg/mens_footwear_3.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_4.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_5.dart';
 import '../view/common/MensFootWearProductPg/mens_footwear_6.dart';
+import '../view/common/MensSuitsProductPg/mens_suit_product_10.dart';
+import '../view/common/MensSuitsProductPg/mens_suit_product_6.dart';
+import '../view/common/MensSuitsProductPg/mens_suit_product_9.dart';
 import '../view/common/MensWearProductPg/mens_wear_10.dart';
 import '../view/common/MensWearProductPg/mens_wear_11.dart';
 import '../view/common/MensWearProductPg/mens_wear_12.dart';
@@ -49,6 +60,21 @@ import '../view/common/MensWearProductPg/mens_wear_6.dart';
 import '../view/common/MensWearProductPg/mens_wear_7.dart';
 import '../view/common/MensWearProductPg/mens_wear_8.dart';
 import '../view/common/MensWearProductPg/mens_wear_9.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_1.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_2.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_3.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_4.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_5.dart';
+import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_6.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_1.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_10.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_2.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_3.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_4.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_6.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_7.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_8.dart';
+import '../view/common/WomensWearProductPg/womens_wear_product_9.dart';
 
 final listOfScreens = [
   Homescreen(),
@@ -131,9 +157,45 @@ final FirstGridMensAccessoriesThirdProductScreen=[
   MensAccessoriesProduct11(),
   MensAccessoriesProduct12(),
 ];
+
+final FirstGridMensSuitsProductScreen=[
+ MensSuitsProduct1(),
+  MensSuitsProduct2(),
+  MensSuitsProduct3(),
+  MensSuitsProduct4(),
+  MensSuitsProduct5(),
+  MensSuitsProduct6(),
+  MensSuitsProduct7(),
+  MensSuitsProduct8(),
+  MensSuitsProduct9(),
+  MensSuitsProduct10(),
+];
+
 final secondGridScreens=[
   WomensClothes(),
   WomensAccessories(),
   WomensJewellery(),
    WomensMakeup(),
 ];
+
+final SecondGridWomensWearProductScreen=[
+  WomenWearProduct1(),
+  WomenWearProduct2(),
+  WomenWearProduct3(),
+  WomenWearProduct4(),
+  WomenWearProduct5(),
+  WomenWearProduct6(),
+  WomenWearProduct7(),
+  WomenWearProduct8(),
+  WomenWearProduct9(),
+  WomenWearProduct10(),
+
+];
+ final SecondGridWomensJewelleryProductScreen=[
+   WomensJewelleryProduct1(),
+   WomensJewelleryProduct2(),
+   WomensJewelleryProduct3(),
+   WomensJewelleryProduct4(),
+   WomensJewelleryProduct5(),
+   WomensJewelleryProduct6(),
+ ];

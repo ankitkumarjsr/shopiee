@@ -9,6 +9,7 @@ const imgbg22i='assets/img22i.png';
 const imgbg22ii='assets/OrderPlaced.gif';
 const imgbg22iii='assets/OrderPlaced1.gif';
 const imgbgin='assets/IndianFlag.gif';
+const imgsad='assets/sadbaby.gif';
 
 //below is engginner hoodie pics
 const imgbg116='assets/engg1.jpeg';
@@ -166,15 +167,17 @@ const imgbg105= 'assets/img105.jpg';
 const imgbg106= 'assets/img106.jpg';
 const imgbg107= 'assets/img107.jpg';
 
+
 //below is womens jewellery pics
+const imgbg139='assets/img139.jpg';
 const imgbg108='assets/img108.jpg';
 const imgbg109='assets/img109.jpg';
 const imgbg110='assets/img110.jpg';
 const imgbg111='assets/img111.jpg';
 const imgbg112='assets/img112.jpg';
 const imgbg113='assets/img113.jpg';
-const imgbg114='assets/img114.jpg';
-const imgbg115='assets/img115.jpg';
+// const imgbg114='assets/img114.jpg';
+// const imgbg115='assets/img115.jpg';
 
 
 

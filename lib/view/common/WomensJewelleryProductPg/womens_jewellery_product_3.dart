@@ -3,17 +3,32 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shopiee/constants/images_constants.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/engghoodie_samplepic.dart';
-import 'package:shopiee/view/common/MensWearProductPg/payment_1.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a1.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a2.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a5.dart';
+import 'package:shopiee/view/common/MensAccessoriesProductPg/Payment_a6.dart';
+import 'package:shopiee/view/common/MensWearProductPg/payment_2.dart';
+import 'package:shopiee/view/common/WomensJewelleryProductPg/payment_wj1.dart';
+import 'package:shopiee/view/common/WomensJewelleryProductPg/payment_wj2.dart';
+import 'package:shopiee/view/common/WomensJewelleryProductPg/payment_wj3.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
-import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Suit.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Accessories.dart';
 import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../models/GridView/FirstGrid/Components/Container2/Mens_FootWearPageBuilder.dart';
+import '../../../models/GridView/FirstGrid/Components/Container3/Container3_Details.dart';
+import '../../../models/GridView/FirstGrid/Components/Container3/mensaccessoriespagebuilder.dart';
+import '../../../models/poster_item_model.dart';
 import '../../screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
+import '../../screen/HomeScreen/components/Grids/Second/componets/womens-jewellery.dart';
 
-class MensSuitsProduct1 extends StatelessWidget {
-  const MensSuitsProduct1({Key? key}) : super(key: key);
+class WomensJewelleryProduct3 extends StatelessWidget {
+  WomensJewelleryProduct3({Key? key}) : super(key: key);
 
+
+  final controller = PageController( keepPage: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +38,7 @@ class MensSuitsProduct1 extends StatelessWidget {
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MensSuits(),
+                  builder: (context) =>WomensJewellery(),
                 )),
             icon: Icon(Icons.arrow_back)),
         title: Text("Product Page"),
@@ -31,28 +46,59 @@ class MensSuitsProduct1 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 12,),
             Row(
-              children: [
-                SizedBox(
-                  width: 355,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Icon(
-                    Icons.share_rounded,
-                    color: Colors.black,
+              children:[
+                Text("   Visit The  Jiva Store",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue),),
+
+                SizedBox(width: 30,),
+                RatingBar.builder(
+                  itemSize: 15,
+                  initialRating: 4.5,
+                  minRating: 4.5,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                  itemBuilder: (context, index) => Icon(
+                    Icons.star,
+                    color: Colors.amber,
                   ),
+                  onRatingUpdate: (rating) {
+                    print(rating);
+                  },
                 ),
+                SizedBox(width: 25,),
+                Text("3,458"),
               ],
+
             ),
-            Positioned(
-              child: Center(
-                child: Image(
-                  image: AssetImage(imgbg88),
+
+
+            Padding(
+              padding: const EdgeInsets.only(top: 8,left: 10),
+              child: Text("Shining jiva Fashion Fancy Pearl Necklace Jewellery Set For Women "),
+            ),
+
+            Row(
+              children:[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: CircleAvatar(backgroundColor: Colors.red.shade900,
+                      radius: 23,
+                      child: Text("  50% \n  off",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white),)),
                 ),
-              ),
-              height: MediaQuery.of(context).size.height * 0.081,
+                SizedBox(width: 290,),
+                Padding(
+                  padding: const EdgeInsets.only(top: 0.1),
+                  child: Container(
+                      decoration: BoxDecoration(shape: BoxShape.circle,border: Border.all(color: Colors.black)),
+                      child: Icon(Icons.share_rounded,color: Colors.black,)),
+                ),],
             ),
+
+            Image(image: AssetImage(imgbg110),height: 320,width:420,),
+
             Divider(
               thickness: 3,
               color: Colors.grey,
@@ -62,41 +108,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "Brand: ",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18),
-                ),
-                Text("ARDO",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18)),
-                SizedBox(
-                  width: 156,
-                ),
-                RatingBar.builder(
-                  itemSize: 20,
-                  initialRating: 4.5,
-                  minRating: 4.5,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 0.0),
-                  itemBuilder: (context, index) => Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                  ),
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text("3"),
+                Text("Deal",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 20),),
               ],
             ),
 
@@ -104,31 +116,11 @@ class MensSuitsProduct1 extends StatelessWidget {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                left: 7,
-              ),
-              child: Text(
-                  "ARDO Men's Suits Slim Fit 3 Pieces Suit Groom Tuxedos Blazer Tux Vest Trousers Prom Suits"),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 240),
-              child: Text(
-                "Currently unavailable",
-                style: TextStyle(color: Colors.red),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Row(
                 children: [
                   Text(
-                    "-51%",
+                    "-50%",
                     style: TextStyle(
                         fontSize: 28,
                         color: Colors.red,
@@ -138,7 +130,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                     width: 13,
                   ),
                   Text(
-                    "\u{20B9}999",
+                    "\u{20B9}300",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -164,7 +156,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "\u{20B9}2000",
+                    "\u{20B9}600",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey.shade800,
@@ -183,13 +175,80 @@ class MensSuitsProduct1 extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
+
             SizedBox(
-              height: 10,
+              height: 12,
             ),
             Divider(
               thickness: 3,
               color: Colors.grey,
             ),
+            Row(
+              children: [
+                SizedBox(width: 12,),
+                CircleAvatar(
+
+                  backgroundColor: Colors.lime,
+                  child: Icon(Icons.percent_outlined,color: Colors.black,),),
+                SizedBox(width: 8,),
+                Text("Save Extra",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              ],
+            ),
+            SizedBox(height: 10,),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.15,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () => Navigator,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Center(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width*0.40,
+                          height: 155,
+                          decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
+
+                          child: Column(
+                            children: [
+                              SizedBox(height: 5,),
+                              Row(
+                                children:[
+                                  SizedBox(width: 4,),
+                                  Text(firstlistdetails[index].icon,style: TextStyle(fontWeight: FontWeight.w500)),
+                                  SizedBox(width: 2,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text(firstlistdetails[index].heading,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                  ),],
+                              ),
+
+                              SizedBox(height: 3,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Text(firstlistdetails[index].description,style: TextStyle(fontWeight: FontWeight.w500),),
+                              ),
+                              SizedBox(height: 12,),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 60),
+                                child: Text(firstlistdetails[index].more,style: TextStyle(color: Colors.blue.shade700,fontWeight: FontWeight.w500),),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                scrollDirection: Axis.horizontal,
+                itemCount: mensfootsize.length,
+              ),
+            ),
+            Divider(
+              thickness: 3,
+              color: Colors.grey,
+            ),
+            SizedBox(height: 5,),
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Row(
@@ -199,23 +258,130 @@ class MensSuitsProduct1 extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.blue.shade900),
-                  )
+                  ),
+                  Text(" Tuesday,  15 April",style: TextStyle(fontWeight: FontWeight.bold),),
+                  Text(" on first order.",style: TextStyle(fontWeight: FontWeight.w400),),
+
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 310),
+              child: Text(
+                "Details",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue.shade900),
+              ),
+            ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "or fastest delievery",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(" Tommorow,  12 April",style: TextStyle(fontWeight: FontWeight.bold),),
+
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "Order Within",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Text(" 5 hrs 21 mins.",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+                  Text(
+                    " Details",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue.shade900),
+                  ),
                 ],
               ),
             ),
             SizedBox(
               height: 10,
             ),
+            Row(
+              children:[
+                SizedBox(width: 9,),
+                Icon(Icons.location_on_outlined,color: Colors.black,),
+                Text("  Deliver To Ankit - Jamshedpur 832108",style: TextStyle(fontWeight: FontWeight.w500,color: Colors.blue.shade900),),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Row(
                 children: [
                   Text(
-                    "Out Of Stock",
+                    "In Stock",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.redAccent),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            InkWell(
+              //   onTap: () {
+              //     showDialog(
+              //       context: context,
+              //       builder: (BuildContext dialogContext) {
+              //         return ListTile(title: Text("ftf"),);
+              //           // AlertDialog(
+              //   backgroundColor: Colors.grey.shade300,
+              //   content: Text('Product Added To Cart Successfully!!'),
+              //   actions: <Widget>[
+              //     TextButton(
+              //       child: Text('Ok'),
+              //       onPressed: () {
+              //         Navigator.of(dialogContext)
+              //             .pop(); // Dismiss alert dialog
+              //       },
+              //     ),
+              //   ],
+              // );
+              //       },
+              //     );
+              //   },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height*0.05,
+                      width: MediaQuery.of(context).size.width*0.19,
+                      color: Colors.grey.shade300,
+                      child: Center(
+                        child: Row(
+                          children: [
+                            Text("  Qty: 1",style: TextStyle(fontWeight: FontWeight.w500),),
+                            Icon(Icons.keyboard_arrow_down_outlined),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 40,),
+                    Text("\u{20B9}20 cashback for every extra unit \nyou buy (Up to \u{20B9}60)",style: TextStyle(fontWeight: FontWeight.w500),)
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -254,7 +420,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                       "Add To Cart",
                       textAlign: TextAlign.center,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                   ),
                 ),
@@ -264,28 +430,11 @@ class MensSuitsProduct1 extends StatelessWidget {
               height: 10,
             ),
             InkWell(
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext dialogContext) {
-                    return AlertDialog(
-                      backgroundColor: Colors.grey.shade300,
-                      title: Image(image: AssetImage(imgsad),),
-
-                      content: Text('\nSorry 😔, \n \nCurrently UnAvailable So You Cant Buy!!'),
-                      actions: <Widget>[
-                        TextButton(
-                          child: Text('Ok'),
-                          onPressed: () {
-                            Navigator.of(dialogContext)
-                                .pop(); // Dismiss alert dialog
-                          },
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Paymentwj3(),
+                  )),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 child: Container(
@@ -298,33 +447,264 @@ class MensSuitsProduct1 extends StatelessWidget {
                       "Buy Now",
                       textAlign: TextAlign.center,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                   ),
                 ),
               ),
             ),
-            Divider(
-              thickness: 3,
-              color: Colors.grey,
+            SizedBox(height: 12,),
+            Row(
+              children: [
+                SizedBox(width: 10,),
+                Icon(Icons.lock,color: Colors.grey,),
+                SizedBox(width: 11,),
+                Text("Secure Transaction",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 235),
-              child: Text(
-                "Product Details",
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey.shade800,
-                    fontWeight: FontWeight.bold),
+            SizedBox(height: 8,),
+            Row(
+              children: [
+                SizedBox(width: 15,),
+                Text("Sold By ",style: TextStyle(fontWeight: FontWeight.w500),),
+                Text("Jiva Pvt ",style: TextStyle(color:Colors.blue ,fontWeight: FontWeight.w500),),
+                Text("and ",style: TextStyle(fontWeight: FontWeight.w500),),
+                Text("Fulfilled by Shopiee.",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.w500),),
+              ],
+            ),
+            SizedBox(height: 12,),
+            Container(
+              padding: const EdgeInsets.only(left: 10),
+              // color: Colors.grey,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  color: Colors.grey.shade500),
+              height: 50,
+              width: double.infinity,
+              child: Row(
+                children: <Widget>[
+                  // CircleAvatar(backgroundImage:AssetImage(imgbg18)),
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(5),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg18),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" PAY ON \n DELIVERY", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    width: 18,
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(6),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg19),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" EASY \n RETURNS", style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    width: 18,
+                  ),
+
+                  Container(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    padding: const EdgeInsets.all(6),
+                    width: 44,
+                    height: 74,
+                    child: Image.asset(imgbg20),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(" FREE DELIVERY \n ON FIRST ORDER",
+                      style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold))
+                ],
               ),
+            ),
+
+            SizedBox(height: 5,),
+            Divider(thickness: 3,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(right: 310),
+              child: Text("Sponsored",style: TextStyle(color: Colors.grey),),
+            ),
+            Row(
+              children: [
+                Image(image: AssetImage(imgbg70),height: 150,width: 180,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Handcuffs Winter Knit Beanie\nCap Hat Neck Warmer Scarf \nand Touchscreen Gloves \nSet for M...",style: TextStyle(fontWeight: FontWeight.w500),),
+                    SizedBox(height: 5,),
+                    Text("\u{20B9}599.00",style: TextStyle(color: Colors.red),),
+                    SizedBox(height: 5,),
+                    Text("✓Prime",style: TextStyle(color: Colors.blue.shade800),)
+                  ],
+                ),
+              ],
+            ),
+            Divider(thickness: 3,color: Colors.grey,),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 100),
+              child: Text("Frequently Brought Together",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            SizedBox(height: 10,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.2,
+              width: MediaQuery.of(context).size.width*0.9,
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              child: Row(
+                children:[
+                  // SizedBox(width: 30,),
+                  Image(image: AssetImage(imgbg108),height:100,),
+                  Text("+",style: TextStyle(fontSize: 30,color:Colors.grey),),
+                  Image(image: AssetImage(imgbg109),height: 100,),
+                  Text("+",style: TextStyle(fontSize: 30,color:Colors.grey),),
+                  Image(image: AssetImage(imgbg110),height: 100,),
+                ],
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height*0.1,
+              width: MediaQuery.of(context).size.width*0.9,
+              decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 1)),
+              child: Row(
+                children: [
+                  SizedBox(width: 50,),
+                  Text("Buy All Three For \u{20B9}649.00",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                  SizedBox(width: 40,),
+                  IconButton(onPressed: () => () {
+
+                  }, icon: Icon(Icons.keyboard_arrow_down,color: Colors.black,))
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Divider(thickness: 3,color: Colors.grey,),
+
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 145),
+              child: Text("Product image gallery ",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              height: MediaQuery.of(context).size.height*0.40,
+              width: MediaQuery.of(context).size.width*0.90,
+              child: Image(image: AssetImage(imgbg110)),
+            ),
+            SizedBox(height: 18,),
+
+            Divider(thickness: 2,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(left: 18),
+              child: Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.025,
+                    width: 80,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: <Color>[
+                            Colors.blue,
+                            Colors.white,
+                          ]),
+                    ),
+                    child: Center(
+                        child: Text(
+                          "Top Brand-",
+                          style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),
+                        )),
+                  ),
+                  Text(
+                    "Jiva",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  88% positive rating from 5K+ customers.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  1.5K+ recent orders from this brand.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 16,
+                ),
+                Icon(
+                  Icons.verified,
+                  size: 18,
+                  color: Colors.green,
+                ),
+                Text(
+                  "  2.5+ years on shopiee.",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                ),
+              ],
+            ),
+            Divider(thickness: 3,color: Colors.grey,),
+            Padding(
+              padding: const EdgeInsets.only(right: 200),
+              child: Text("Features & details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             ),
             SizedBox(
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 220),
+              padding: const EdgeInsets.only(right: 290),
               child: Text(
-                "Material Composition",
+                "Clasp Type",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -332,20 +712,19 @@ class MensSuitsProduct1 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 250),
+              padding: const EdgeInsets.only(right: 275),
               child: Text(
-                "Fleece Cotton",
+                "Hook Clasp",
                 style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
               ),
             ),
             SizedBox(
               height: 12,
             ),
-
             Padding(
-              padding: const EdgeInsets.only(right: 300),
+              padding: const EdgeInsets.only(right: 330),
               child: Text(
-                "Fit Type",
+                "Style",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -355,7 +734,27 @@ class MensSuitsProduct1 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 305),
               child: Text(
-                "Slim",
+                "Regular",
+                style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 280),
+              child: Text(
+                "Closure Type",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 275),
+              child: Text(
+                "No Closure",
                 style: TextStyle(fontSize: 18, color: Colors.grey.shade900),
               ),
             ),
@@ -387,7 +786,7 @@ class MensSuitsProduct1 extends StatelessWidget {
               child: Text(
                 "About This Item",
                 style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(
@@ -399,7 +798,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                 children: [
                   Icon(Icons.stop, size: 15),
                   Text(
-                    "Wash Care:Do Not Bleach,wash it with similar colours,\nMachine Wash Cold,Dry in Shade.",
+                    "Premium Export Quality 320 GSM Biowashed Cotton \nwith Brushed Fleece Inside and Belly Pockets. Long\n-lasting anti-fading high-definition Digital Prints",
                     style: TextStyle(fontSize: 14),
                   )
                 ],
@@ -414,7 +813,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                 children: [
                   Icon(Icons.stop, size: 15),
                   Text(
-                    "Fit Type:Regular Fit,Full Sleeves;Colour:Red,Fabric:100% \nPure Cotton(Eco Friendly.)",
+                    "Please check both our tshirts and hoodie SIZE CHARTS \nbefore ordering - hoodies are generally worn a bit \nloose compared to tshirts, so you'll \nideally need to pick Chest Size+2 inches.)",
                     style: TextStyle(fontSize: 14),
                   )
                 ],
@@ -429,7 +828,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                 children: [
                   Icon(Icons.stop, size: 15),
                   Text(
-                    "Style Point:Hoodie With Printed gives a trendy yet \ncasual wear.Durable Stitching and quality finish\n makes this product a must have this winter",
+                    "We recommend you to check our complete collection \non our insta/site.We print custom designs not just on \ntshirts but on everything.",
                     style: TextStyle(fontSize: 14),
                   )
                 ],
@@ -465,15 +864,7 @@ class MensSuitsProduct1 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 12),
               child: ReadMoreText(
-                "This winter Indian homegrown brand ADRO brings you the best quality 100% cotton "
-                "hooded sweatshirts  to keep you warm. Made in India Product for the Indian market"
-                " at the Best Prices. Pair it with Jeans/Joggers or  Shorts and this sweatshirts/hoodie made "
-                "of soft fabric will make other guys go green with envy. We at ADRO offers Top Quality casual wear "
-                "in the widest variety which makes it easy to choose and at the prices that are easy to reach."
-                "ADRO products are made of Premium Fabrics which are Eco-Friendly to ensure the Best Quality and"
-                " Great Comfort.ADRO deals in Men's Sweatshirts, Men's Printed T-Shirts, Full Sleeve T-Shirts,"
-                " Polo T-Shirts, Hoodies for men.We also in plan to add Men's Shirts, Jeans and Chinos/Shorts to"
-                " keep you updated with trends. ADRO - Keep Inventing!! ",
+                "Our designs are not the usual pop culture trends, but our own twisty interpretation of trending themes.",
                 trimLines: 1,
                 colorClickableText: Colors.pink,
                 trimMode: TrimMode.Line,
@@ -487,108 +878,9 @@ class MensSuitsProduct1 extends StatelessWidget {
               thickness: 2,
               color: Colors.grey,
             ),
+
             SizedBox(
               height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 18),
-              child: Row(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.025,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: <Color>[
-                            Colors.lightBlue,
-                            Colors.white,
-                          ]),
-                    ),
-                    child: Center(
-                        child: Text(
-                      "Top Brand-",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
-                  ),
-                  Text(
-                    "ARDO",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  84% positive rating from 10K+ customers.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  2K+ recent orders from this brand.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 16,
-                ),
-                Icon(
-                  Icons.verified,
-                  size: 18,
-                  color: Colors.green,
-                ),
-                Text(
-                  "  2+ years on shopiee.",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.5,
-              width: MediaQuery.of(context).size.width * 0.8,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 3)),
-              child: Image(image: AssetImage(imgbg1), fit: BoxFit.contain),
-            ),
-            Divider(
-              thickness: 2,
-              color: Colors.grey,
             ),
             Padding(
               padding: const EdgeInsets.only(right: 200),
@@ -609,8 +901,8 @@ class MensSuitsProduct1 extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10),
                   child: RatingBar.builder(
                     itemSize: 30,
-                    initialRating: 3.5,
-                    minRating: 3.5,
+                    initialRating: 4.5,
+                    minRating: 4.5,
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
@@ -690,7 +982,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                             width: 5,
                           ),
                           Text(
-                            " Cloth Quality",
+                            " Good Quality",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w500),
                           ),
@@ -783,17 +1075,15 @@ class MensSuitsProduct1 extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
-                SizedBox(
-                  width: 25,
-                ),
+                SizedBox(width: 25,),
                 Container(
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.black54)),
+                  decoration: BoxDecoration(border: Border.all(color: Colors.black54)),
                   height: 43,
                   width: 66,
                   child: Image(
                     image: AssetImage(imgbgin),
                     fit: BoxFit.cover,
+
                   ),
                 ),
               ],
@@ -862,20 +1152,16 @@ class MensSuitsProduct1 extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Awesome",
+                  "Loved It",
                   style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                Icon(
-                  Icons.emoji_emotions,
-                  color: Colors.amber,
                 ),
                 Icon(
                   Icons.favorite,
                   color: Colors.pink,
                 ),
-                Text(
-                  "Suit",
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                Icon(
+                  Icons.favorite,
+                  color: Colors.pink,
                 ),
               ],
             ),
@@ -883,9 +1169,9 @@ class MensSuitsProduct1 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 110),
+              padding: const EdgeInsets.only(right: 140),
               child: Text(
-                "Reviewed in India on 3 November 2022",
+                "Reviewed in India on 10 June 2022",
                 style: TextStyle(color: Colors.grey.shade800),
               ),
             ),
@@ -893,8 +1179,8 @@ class MensSuitsProduct1 extends StatelessWidget {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 220),
-              child: Text("Size:XL  |  Colour:Red"),
+              padding: const EdgeInsets.only(right: 275),
+              child: Text(" Colour:Black"),
             ),
             SizedBox(
               height: 5,
@@ -902,7 +1188,7 @@ class MensSuitsProduct1 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Text(
-                  "Very Good and quality also good,color even 1 % also not shaded, i have used over 1 years , now again i wanted to buy with different color,"),
+                  " Quality of this product is awesome. i totally loved this product"),
             ),
             SizedBox(
               height: 10,
@@ -943,15 +1229,14 @@ class MensSuitsProduct1 extends StatelessWidget {
                       child: Text(
                         "Helpful",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style:
+                        TextStyle( color: Colors.white,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 15,
-                ),
+
+                SizedBox(width: 15,),
                 InkWell(
                   onTap: () {
                     showDialog(
@@ -983,8 +1268,8 @@ class MensSuitsProduct1 extends StatelessWidget {
                       child: Text(
                         "Report",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white70, fontWeight: FontWeight.bold),
+                        style:
+                        TextStyle( color: Colors.white70,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -1002,12 +1287,12 @@ class MensSuitsProduct1 extends StatelessWidget {
                   width: 15,
                 ),
                 CircleAvatar(
-                    maxRadius: 20, backgroundImage: AssetImage(imgbg3)),
+                    maxRadius: 20, backgroundImage: AssetImage(imgbg73)),
                 SizedBox(
                   width: 10,
                 ),
                 Text(
-                  "Ravi@98322",
+                  "Pacdrhtji151",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -1055,7 +1340,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Nice Suit ",
+                  "Nice",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Icon(
@@ -1081,60 +1366,17 @@ class MensSuitsProduct1 extends StatelessWidget {
             SizedBox(
               height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 140),
-              child: Text("Height:5'10''  |  Weight:110-112 kg"),
-            ),
 
-            Container(
-              height: MediaQuery.of(context).size.height * 0.161,
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () => showDialog(
-                      context: context,
-                      builder: (BuildContext dialogContext) {
-                        return AlertDialog(
-                          backgroundColor: Colors.grey.shade300,
-                          content: Container(
-                              child: Image(
-                            image: AssetImage(imgbg88),
-                          )),
-                          actions: <Widget>[
-                            TextButton(
-                              child: Text('Ok'),
-                              onPressed: () {
-                                Navigator.of(dialogContext)
-                                    .pop(); // Dismiss alert dialog
-                              },
-                            ),
-                          ],
-                        );
-                      },
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        imgbg88,
-                        height: MediaQuery.of(context).size.height * 0.109,
-                        width: MediaQuery.of(context).size.width * 0.209,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  );
-                },
-                scrollDirection: Axis.horizontal,
-                itemCount: 4
-              ),
-            ),
+
+
 
             SizedBox(
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(right: 15),
               child: Text(
-                  "A Bit Loose,But i encourage seller to make more suits,A Good Choice For Formal wear"),
+                  "I encourage to more make quality good"),
             ),
             SizedBox(
               height: 10,
@@ -1175,15 +1417,14 @@ class MensSuitsProduct1 extends StatelessWidget {
                       child: Text(
                         "Helpful",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                        style:
+                        TextStyle( color: Colors.white,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 15,
-                ),
+
+                SizedBox(width: 15,),
                 InkWell(
                   onTap: () {
                     showDialog(
@@ -1215,21 +1456,16 @@ class MensSuitsProduct1 extends StatelessWidget {
                       child: Text(
                         "Report",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white70, fontWeight: FontWeight.bold),
+                        style:
+                        TextStyle( color: Colors.white70,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Divider(
-              thickness: 1,
-              color: Colors.grey,
-            ),
+            SizedBox(height: 10,),
+            Divider(thickness: 1,color: Colors.grey,),
             InkWell(
               onTap: () {
                 showDialog(
@@ -1237,8 +1473,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   builder: (BuildContext dialogContext) {
                     return AlertDialog(
                       backgroundColor: Colors.grey.shade300,
-                      content:
-                          Text('Not More Than Two Reviews Are There Till Now'),
+                      content: Text('Not More Than Two Reviews Are There Till Now'),
                       actions: <Widget>[
                         TextButton(
                           child: Text('Ok'),
@@ -1253,20 +1488,11 @@ class MensSuitsProduct1 extends StatelessWidget {
                 );
               },
               child: ListTile(
-                leading: Text(
-                  "See all reviews",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.black,
-                ),
+                leading: Text("See all reviews",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,),
               ),
             ),
-            Divider(
-              thickness: 1,
-              color: Colors.grey,
-            ),
+            Divider(thickness: 1,color: Colors.grey,),
 
             SizedBox(
               height: 5,
@@ -1294,11 +1520,11 @@ class MensSuitsProduct1 extends StatelessWidget {
                   labelText: "Search in reviews, Q&A....",
                   focusedBorder: OutlineInputBorder(
                       borderSide:
-                          const BorderSide(color: Colors.blue, width: 2.0),
+                      const BorderSide(color: Colors.blue, width: 2.0),
                       borderRadius: BorderRadius.circular(15.0)),
                   enabledBorder: OutlineInputBorder(
                       borderSide:
-                          const BorderSide(color: Colors.black, width: 2.0),
+                      const BorderSide(color: Colors.black, width: 2.0),
                       borderRadius: BorderRadius.circular(15.0)),
                 ),
               ),
@@ -1375,7 +1601,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 105),
                     child: Text(
-                      "ARDO SELLER   |  6 months ago",
+                      " SELLER   |  6 months ago",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w500),
                     ),
@@ -1428,7 +1654,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 105),
                     child: Text(
-                      "ARDO SELLER   |  9 months ago",
+                      " SELLER   |  9 months ago",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w500),
                     ),
@@ -1481,7 +1707,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 105),
                     child: Text(
-                      "ARDO SELLER   |  1 months ago",
+                      " SELLER   |  1 months ago",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w500),
                     ),
@@ -1534,7 +1760,7 @@ class MensSuitsProduct1 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 105),
                     child: Text(
-                      "ARDO SELLER   |  2 months ago",
+                      " SELLER   |  2 months ago",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.w500),
                     ),

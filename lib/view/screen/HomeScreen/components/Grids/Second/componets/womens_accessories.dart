@@ -13,7 +13,7 @@ class WomensAccessories extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.pink.shade900,
         leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.pop(context),),
-        title:Text("Mens Suits"),
+        title:Text("Women's Accessories"),
         actions: [IconButton(onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => CartScreen(),)), icon:Icon(Icons.shopping_cart))],
       ),
       body: SingleChildScrollView(

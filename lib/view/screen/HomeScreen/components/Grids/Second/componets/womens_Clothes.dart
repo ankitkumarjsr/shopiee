@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopiee/models/GridView/SecondGrid/Components/Container_1_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
+import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
+
+import '../../../../../../../constants/screen_list.dart';
 
 class WomensClothes extends StatelessWidget {
   const WomensClothes({Key? key}) : super(key: key);
@@ -10,7 +13,7 @@ class WomensClothes extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent.shade200,
-        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.pop(context),),
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),)),),
         title:Text("Women's Clothes"),
         actions: [IconButton(onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => CartScreen(),)), icon:Icon(Icons.shopping_cart))],
       ),
@@ -32,6 +35,7 @@ class WomensClothes extends StatelessWidget {
                 ),
                 itemBuilder: (context, index) {
                   return GestureDetector(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SecondGridWomensWearProductScreen[index],)),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/Container1_Details.dart';
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container4_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
+import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
+
+import '../../../../../../../constants/screen_list.dart';
 class MensSuits extends StatelessWidget {
   const MensSuits({Key? key}) : super(key: key);
 
@@ -10,7 +13,7 @@ class MensSuits extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.pink.shade900,
-        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.pop(context),),
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),))),
        title:Text("Mens Suits"),
         actions: [IconButton(onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => CartScreen(),)), icon:Icon(Icons.shopping_cart))],
       ),
@@ -27,7 +30,7 @@ class MensSuits extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return GestureDetector(
-
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FirstGridMensSuitsProductScreen[index],)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
