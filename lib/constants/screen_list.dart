@@ -66,6 +66,12 @@ import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_3.dart'
 import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_4.dart';
 import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_5.dart';
 import '../view/common/WomensJewelleryProductPg/womens_jewellery_product_6.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_1.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_2.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_3.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_4.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_5.dart';
+import '../view/common/WomensMakeupProductPg/women_makeup_Product_6.dart';
 import '../view/common/WomensWearProductPg/womens_wear_product_1.dart';
 import '../view/common/WomensWearProductPg/womens_wear_product_10.dart';
 import '../view/common/WomensWearProductPg/womens_wear_product_2.dart';
@@ -198,4 +204,12 @@ final SecondGridWomensWearProductScreen=[
    WomensJewelleryProduct4(),
    WomensJewelleryProduct5(),
    WomensJewelleryProduct6(),
+ ];
+ final SecondGridWomensMakeupProductScreen=[
+   WomensMakeupProduct1(),
+   WomensMakeupProduct2(),
+   WomensMakeupProduct3(),
+   WomensMakeupProduct4(),
+   WomensMakeupProduct5(),
+   WomensMakeupProduct6(),
  ];

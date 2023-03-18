@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shopiee/constants/images_constants.dart';
 import 'package:shopiee/models/GridView/SecondGrid/Components/Container_3_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/home_appbar.dart';
+import 'package:shopiee/view/screen/HomeScreen/home_screen.dart';
 
 import '../../../../../../../constants/screen_list.dart';
 import '../../../../../../../models/GridView/SecondGrid/Components/Container_1_Details.dart';
@@ -14,7 +16,7 @@ class WomensJewellery extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.pop(context),),
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),)),),
         title:Text("Women's Jewellery"),
         actions: [IconButton(onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => CartScreen(),)), icon:Icon(Icons.shopping_cart))],
       ),

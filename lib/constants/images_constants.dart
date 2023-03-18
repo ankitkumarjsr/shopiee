@@ -10,6 +10,7 @@ const imgbg22ii='assets/OrderPlaced.gif';
 const imgbg22iii='assets/OrderPlaced1.gif';
 const imgbgin='assets/IndianFlag.gif';
 const imgsad='assets/sadbaby.gif';
+const imgmakeup='assets/Makeup.gif';
 
 //below is engginner hoodie pics
 const imgbg116='assets/engg1.jpeg';
@@ -178,6 +179,25 @@ const imgbg112='assets/img112.jpg';
 const imgbg113='assets/img113.jpg';
 // const imgbg114='assets/img114.jpg';
 // const imgbg115='assets/img115.jpg';
+
+//below is womens makeup pics
+const imgbg140='assets/img140.jpg';
+
+const imgbg141='assets/img141.jpg';
+const imgbg142='assets/img142.jpg';
+const imgbg143='assets/img143.jpg';
+const imgbg144='assets/img144.jpg';
+const imgbg145='assets/img145.jpeg';
+const imgbg146='assets/img146.jpg';
+
+//below is lakme foundation pagebuilder pics
+const imgbg147='assets/img147.jpeg';
+const imgbg148='assets/img148.jpeg';
+const imgbg149='assets/img149.jpeg';
+const imgbg150='assets/img150.jpeg';
+const imgbg151='assets/img151.jpg';
+
+
 
 
 

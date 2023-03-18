@@ -15,6 +15,7 @@ import 'package:shopiee/view/common/product_page.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Footwears.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Suit.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/components/Mens_Wear.dart';
+import 'package:shopiee/view/screen/HomeScreen/components/Grids/Second/componets/womens_makeups.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/bottom_navi_bar.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/Grids/First/firstgrid_container.dart';
 import 'package:shopiee/view/screen/HomeScreen/components/home_appbar.dart';
@@ -205,7 +206,14 @@ class Homescreen extends StatelessWidget {
                 height: 12,
                 thickness: 3,
               ),
-
+              InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => WomensMakeup(),)),
+                  child: Image(image: AssetImage(imgmakeup),height: 182,width: 600,)),
+              const Divider(
+                color: Colors.grey,
+                height: 12,
+                thickness: 3,
+              ),
               //below third grid
               Text("Popular Brands In Men's Wear",style: TextStyle(decoration: TextDecoration.underline,fontSize: 25,fontWeight: FontWeight.bold,color: Color.fromRGBO(
                   6, 9, 47, 0.8)),),
