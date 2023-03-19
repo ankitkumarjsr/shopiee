@@ -3,6 +3,7 @@ import 'package:shopiee/models/GridView/FirstGrid/Components/Container1/Containe
 import 'package:shopiee/models/GridView/FirstGrid/Components/Container4_Details.dart';
 import 'package:shopiee/view/screen/CartScreen/cart_screen.dart';
 
+import '../../../../../../../models/GridView/SecondGrid/Components/Container_2_Details.dart';
 import '../../First/components/Mens_Suit.dart';
 class WomensAccessories extends StatelessWidget {
   const WomensAccessories({Key? key}) : super(key: key);
@@ -22,13 +23,15 @@ class WomensAccessories extends StatelessWidget {
           child: GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: containerposteritemsdetails4.length,
+            itemCount:   containerposterwomenaccessories.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 0.58,
+              mainAxisSpacing: 2.5,
             ),
             itemBuilder: (context, index) {
               return GestureDetector(
+                // onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ,)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -36,7 +39,7 @@ class WomensAccessories extends StatelessWidget {
                     ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
-                          containerposteritemsdetails4[index].images,
+                          containerposterwomenaccessories[index].images,
                           height: MediaQuery.of(context).size.height * 0.30,
                           width: MediaQuery.of(context).size.width * 0.45,
                           fit: BoxFit.fill,
@@ -44,12 +47,21 @@ class WomensAccessories extends StatelessWidget {
                     const SizedBox(
                       height: 6,
                     ),
-                    Text(containerposteritemsdetails4[index].Description,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text(containerposterwomenaccessories[index].text,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(height: 5,),
-                    Text(containerposteritemsdetails4[index].Price,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w500),),
+                    Row(
+                      children: [
+                        SizedBox(width: 50,),
+                        Text(containerposterwomenaccessories[index].price,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+                        SizedBox(width: 10,),
+                        Text(containerposterwomenaccessories[index].disprice,textAlign: TextAlign.center,style: TextStyle(decoration: TextDecoration.lineThrough,fontWeight: FontWeight.w400),),
+                      ],
+                    ),
+                    SizedBox(height: 5,),
                     SizedBox(height: 2,),
-                    Text(containerposteritemsdetails4[index].Text,textAlign: TextAlign.center),
-
+                    Container(
+                      color: Colors.pink.shade900,
+                        child: Text(containerposterwomenaccessories[index].percen,textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.w600,color: Colors.limeAccent))),
                   ],
 
                 ),
@@ -58,6 +70,6 @@ class WomensAccessories extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }

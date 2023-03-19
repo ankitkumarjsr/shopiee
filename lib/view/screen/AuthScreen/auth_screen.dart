@@ -23,12 +23,13 @@ class AuthScreen extends StatelessWidget {
                 child: Image.asset(imgbg22),
               ),
               Positioned(
-                top:478,
+                top:479,
                 child: Column(
                   children: [
+
                   Text("𝐋𝐢𝐟𝐞 𝐈𝐬 𝐀 𝐒𝐡𝐨𝐩𝐚𝐡𝐨𝐥𝐢𝐜!",style: TextStyle(color: Colors.white, fontSize: 23),),
                      SizedBox(height: 3),
-                     Text("So Shop Now With Shoppiee",style: TextStyle(color: Colors.white,fontSize: 17),),
+                     Text("So Shop Now With Shopiee",style: TextStyle(color: Colors.white,fontSize: 17),),
                     SizedBox(
                       height: 30,
                     ),
@@ -49,7 +50,7 @@ class AuthScreen extends StatelessWidget {
                       height: 5,
                     ),
                     InkWell(
-                      onTap: () => Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => AppScreen() ,)),
+                      onTap: () => Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => SignUp() ,)),
                       child: Container(
                         height: 30,
                         width: MediaQuery.of(context).size.width * 0.7,
