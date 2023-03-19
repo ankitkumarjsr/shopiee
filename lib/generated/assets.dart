@@ -7,7 +7,7 @@ class Assets {
   static const String assets3 = 'assets/3.jpg';
   static const String assets4 = 'assets/4.jpeg';
   static const String assets5 = 'assets/5.jpg';
-  // static const String assetsDil Laga Lia = 'assets/Dil Laga Lia.mp4';
+  static const String assetsDil Laga Lia = 'assets/Dil Laga Lia.mp4';
   static const String assetsEngg1 = 'assets/engg1.jpeg';
   static const String assetsEngg2 = 'assets/engg2.jpeg';
   static const String assetsEngg3 = 'assets/engg3.jpeg';
@@ -65,6 +65,8 @@ class Assets {
   static const String assetsImg149 = 'assets/img149.jpeg';
   static const String assetsImg15 = 'assets/img15.jpg';
   static const String assetsImg150 = 'assets/img150.jpeg';
+  static const String assetsImg151 = 'assets/img151.jpg';
+  static const String assetsImg152 = 'assets/img152.jpg';
   static const String assetsImg16 = 'assets/img16.jpg';
   static const String assetsImg17 = 'assets/img17.jpg';
   static const String assetsImg18 = 'assets/img18.png';
@@ -148,6 +150,9 @@ class Assets {
   static const String assetsImg98 = 'assets/img98.jpg';
   static const String assetsImg99 = 'assets/img99.jpg';
   static const String assetsImgbg128 = 'assets/imgbg128.png';
+  static const String assetsImgbg153 = 'assets/imgbg153.jpg';
+  static const String assetsImgbg154 = 'assets/imgbg154.jpg';
+  static const String assetsImgborder = 'assets/imgborder.png';
   static const String assetsIndianFlag = 'assets/IndianFlag.gif';
   static const String assetsMakeup = 'assets/Makeup.gif';
   static const String assetsOrderPlaced = 'assets/OrderPlaced.gif';

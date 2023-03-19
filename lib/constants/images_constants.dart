@@ -11,6 +11,7 @@ const imgbg22iii='assets/OrderPlaced1.gif';
 const imgbgin='assets/IndianFlag.gif';
 const imgsad='assets/sadbaby.gif';
 const imgmakeup='assets/Makeup.gif';
+const imgborder='assets/imgborder.png';
 
 //below is engginner hoodie pics
 const imgbg116='assets/engg1.jpeg';
@@ -197,7 +198,11 @@ const imgbg149='assets/img149.jpeg';
 const imgbg150='assets/img150.jpeg';
 const imgbg151='assets/img151.jpg';
 
-
+//below is womens accesories pics
+const imgbg152='assets/img152.jpg';
+const imgbg153='assets/imgbg153.jpg';
+const imgbg154='assets/imgbg154.jpg';
+const imgbg155='assets/img153.jpg';
 
 
 
